@@ -1,0 +1,52 @@
+
+> cafe-raiz-saas-demo@1.0.0 dev
+> next dev -p 3000
+
+▲ Next.js 16.2.11 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.31.32.178:3000
+- Environments: .env.development.local, .env.local
+✓ Ready in 8.5s
+
+○ Compiling /menu ...
+ GET /menu?branch=providencia&qr=mesa-01 200 in 44s (next.js: 38.5s, application-code: 5.7s)
+○ Compiling /api/platform ...
+ GET /api/platform 200 in 9.9s (next.js: 9.2s, application-code: 780ms)
+ GET /api/platform 200 in 71ms (next.js: 17ms, application-code: 54ms)
+ GET /menu?branch=providencia&qr=mesa-01 200 in 678ms (next.js: 37ms, application-code: 641ms)
+ GET /api/platform?branch=all&days=7 200 in 885ms (next.js: 442ms, application-code: 443ms)
+ GET /api/menu 200 in 3.9s (next.js: 3.5s, application-code: 334ms)
+ POST /api/track 200 in 3.9s (next.js: 2.6s, application-code: 1296ms)
+ GET /api/platform?branch=all&days=7 200 in 98ms (next.js: 37ms, application-code: 61ms)
+ POST /api/track 200 in 146ms (next.js: 18ms, application-code: 128ms)
+ POST /api/track 200 in 111ms (next.js: 15ms, application-code: 96ms)
+ POST /api/track 200 in 699ms (next.js: 597ms, application-code: 102ms)
+ GET /api/platform?branch=all&days=7 200 in 95ms (next.js: 18ms, application-code: 77ms)
+ POST /api/track 200 in 195ms (next.js: 28ms, application-code: 167ms)
+ POST /api/track 200 in 197ms (next.js: 132ms, application-code: 65ms)
+ GET /api/platform?branch=all&days=7 200 in 95ms (next.js: 15ms, application-code: 79ms)
+ POST /api/track 200 in 82ms (next.js: 13ms, application-code: 69ms)
+ POST /api/track 200 in 86ms (next.js: 31ms, application-code: 54ms)
+ GET /api/platform?branch=all&days=7 200 in 49ms (next.js: 10ms, application-code: 39ms)
+ POST /api/track 200 in 84ms (next.js: 11ms, application-code: 73ms)
+ POST /api/track 200 in 100ms (next.js: 49ms, application-code: 50ms)
+ GET /api/platform?branch=all&days=7 200 in 119ms (next.js: 24ms, application-code: 95ms)
+ POST /api/track 500 in 2.7s (next.js: 10ms, application-code: 2.7s)
+ POST /api/track 200 in 1265ms (next.js: 673ms, application-code: 591ms)
+ POST /api/track 200 in 1292ms (next.js: 25ms, application-code: 1267ms)
+ GET /api/platform?branch=all&days=7 200 in 368ms (next.js: 214ms, application-code: 154ms)
+○ Compiling /admin ...
+ GET /admin 200 in 12.0s (next.js: 9.1s, application-code: 2.9s)
+ GET /api/auth/me 200 in 2.3s (next.js: 2.1s, application-code: 187ms)
+○ Compiling /admin/dashboard ...
+ GET /admin/dashboard 200 in 8.8s (next.js: 8.0s, application-code: 820ms)
+ GET /admin/dashboard 200 in 620ms (next.js: 150ms, application-code: 470ms)
+ GET /api/menu 200 in 1049ms (next.js: 100ms, application-code: 949ms)
+ GET /api/platform?branch=all&days=7 200 in 1269ms (next.js: 133ms, application-code: 1136ms)
+ GET /api/menu 200 in 1396ms (next.js: 162ms, application-code: 1234ms)
+ GET /api/platform?branch=all&days=7 200 in 1423ms (next.js: 243ms, application-code: 1180ms)
+ POST /api/auth/logout 200 in 371ms (next.js: 344ms, application-code: 26ms)
+ GET /admin/login 200 in 3.6s (next.js: 3.3s, application-code: 254ms)
+ POST /api/auth/logout 200 in 492ms (next.js: 212ms, application-code: 279ms)
+ GET /admin/login 200 in 950ms (next.js: 451ms, application-code: 499ms)
+ GET /api/auth/me 401 in 169ms (next.js: 134ms, application-code: 35ms)

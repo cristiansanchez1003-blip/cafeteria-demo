@@ -1,0 +1,20 @@
+⚠ Slow filesystem detected. The benchmark took 1297ms. If C:\Users\cristian1\Desktop\Cafetería de Pirque\.next/dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+Error registrando evento: Error: UNKNOWN: unknown error, open 'C:\Users\cristian1\Desktop\Cafetería de Pirque\data\platform.json'
+    at async writeJsonFile (lib\repoJsonStore.js:110:3)
+    at async writePlatform (lib\platformStore.js:49:3)
+    at async recordEvent (lib\platformStore.js:283:3)
+    at async POST (app\api\track\route.js:20:20)
+  108 |   if (cfg) return writeToGithub(cfg, filePath, data, commitMessage)
+  109 |
+> 110 |   await fs.writeFile(localFile(filePath), JSON.stringify(data, null, 2), 'utf8')
+      |   ^
+  111 |   return { source: 'local' }
+  112 | }
+  113 | {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'open',
+  path: 'C:\\Users\\cristian1\\Desktop\\Cafetería de Pirque\\data\\platform.json'
+}
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://C:/Users/cristian1/Desktop/Cafetería de Pirque/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489:13)

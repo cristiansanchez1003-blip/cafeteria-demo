@@ -1,0 +1,1480 @@
+{
+  "settings": {
+    "name": "Café Raíz",
+    "slogan": "Cocina de estación, café de especialidad y encuentros de barrio.",
+    "address": "Av. Providencia 2148, Providencia",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Santiago+Chile",
+    "hours": "Lunes a domingo · 8:30 a 23:00",
+    "whatsapp": "56912345678",
+    "instagram": "https://www.instagram.com/",
+    "instagramHandle": "@elcafedigital",
+    "email": "hola@elcafedigital.cl",
+    "city": "Santiago",
+    "brandColor": "#2F6B47",
+    "accentColor": "#D6A85A",
+    "slogan_en": "Premium digital menus for cafés, restaurants, and bars.",
+    "hours_en": "Monday to Sunday · 8:30 AM - 11:00 PM",
+    "business_id": "cafe-raiz",
+    "reviewCta": "Déjanos tu opinión",
+    "newsletterTitle": "Recibe nuestras novedades",
+    "newsletterText": "Entérate del menú del día, eventos y promociones especiales.",
+    "theme": {
+      "logoUrl": "",
+      "colors": {
+        "paper": "#F7F4EE",
+        "ink": "#24282A",
+        "forest": "#2F6B47",
+        "mint": "#BFE5CB",
+        "accent": "#D6A85A"
+      },
+      "radius": "18px",
+      "buttonStyle": "pill",
+      "cardStyle": "soft-shadow",
+      "tone": "cercano, cálido y gastronómico"
+    }
+  },
+  "promotions": [
+    {
+      "id": "menu-dia",
+      "title": "Menú del día",
+      "subtitle": "Plato principal, bebida y café por tiempo limitado.",
+      "badge": "Hoy",
+      "cta": "Ver recomendados",
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80",
+      "active": true,
+      "sort": 1,
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "starts_at": "2026-07-14T16:56:57.179Z",
+      "ends_at": "2026-08-04T16:56:57.200Z"
+    },
+    {
+      "id": "brunch",
+      "title": "Brunch de fin de semana",
+      "subtitle": "Opciones dulces, saladas y café de especialidad.",
+      "badge": "Sáb · Dom",
+      "cta": "Explorar brunch",
+      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=80",
+      "active": true,
+      "sort": 2,
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "starts_at": "2026-07-14T16:56:57.200Z",
+      "ends_at": "2026-08-04T16:56:57.200Z"
+    },
+    {
+      "id": "happy-hour",
+      "title": "Happy hour",
+      "subtitle": "Coctelería, tablas y cervezas para cerrar el día.",
+      "badge": "18:00 - 20:00",
+      "cta": "Ver bar",
+      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
+      "active": true,
+      "sort": 3,
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "starts_at": "2026-07-14T16:56:57.200Z",
+      "ends_at": "2026-08-04T16:56:57.200Z"
+    }
+  ],
+  "analytics": {
+    "summary": {
+      "scansToday": 184,
+      "scansWeek": 1268,
+      "conversionRate": 18,
+      "avgSessionSeconds": 142
+    },
+    "devices": [
+      {
+        "label": "iPhone",
+        "value": 46
+      },
+      {
+        "label": "Android",
+        "value": 42
+      },
+      {
+        "label": "Desktop",
+        "value": 12
+      }
+    ],
+    "locations": [
+      {
+        "label": "Mesa 01",
+        "value": 212
+      },
+      {
+        "label": "Mesa 07",
+        "value": 168
+      },
+      {
+        "label": "Mostrador",
+        "value": 141
+      },
+      {
+        "label": "Instagram Bio",
+        "value": 96
+      }
+    ],
+    "hours": [
+      {
+        "label": "09:00",
+        "value": 36
+      },
+      {
+        "label": "12:00",
+        "value": 74
+      },
+      {
+        "label": "15:00",
+        "value": 58
+      },
+      {
+        "label": "18:00",
+        "value": 112
+      },
+      {
+        "label": "21:00",
+        "value": 81
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "cafeteria",
+      "name": "Cafetería",
+      "emoji": "☕",
+      "sort": 1,
+      "name_en": "Coffee Bar"
+    },
+    {
+      "id": "brunch",
+      "name": "Brunch",
+      "emoji": "🍳",
+      "sort": 2,
+      "name_en": "Brunch"
+    },
+    {
+      "id": "fondos",
+      "name": "Platos de fondo",
+      "emoji": "🍽️",
+      "sort": 3,
+      "name_en": "Mains"
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sándwiches",
+      "emoji": "🥪",
+      "sort": 4,
+      "name_en": "Sandwiches"
+    },
+    {
+      "id": "postres",
+      "name": "Postres",
+      "emoji": "🍰",
+      "sort": 5,
+      "name_en": "Desserts"
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas",
+      "emoji": "🥤",
+      "sort": 6,
+      "name_en": "Drinks"
+    },
+    {
+      "id": "bar",
+      "name": "Bar",
+      "emoji": "🍹",
+      "sort": 7,
+      "name_en": "Bar"
+    }
+  ],
+  "products": [
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        },
+        {
+          "id": "grande",
+          "name": "Grande",
+          "price_delta": 700
+        }
+      ],
+      "extras": [
+        {
+          "id": "leche-avena",
+          "name": "Leche de avena",
+          "price": 600
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "espresso-tonic",
+      "categoryId": "cafeteria",
+      "name": "Espresso tonic",
+      "description": "Espresso doble, tónica premium, hielo y piel de naranja.",
+      "price": 4200,
+      "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo",
+        "recomendado"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        },
+        {
+          "id": "grande",
+          "name": "Grande",
+          "price_delta": 700
+        }
+      ],
+      "extras": [
+        {
+          "id": "leche-avena",
+          "name": "Leche de avena",
+          "price": 600
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "flat-white",
+      "categoryId": "cafeteria",
+      "name": "Flat white",
+      "description": "Café de especialidad con leche texturizada y doble shot.",
+      "price": 3600,
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        },
+        {
+          "id": "grande",
+          "name": "Grande",
+          "price_delta": 700
+        }
+      ],
+      "extras": [
+        {
+          "id": "leche-avena",
+          "name": "Leche de avena",
+          "price": 600
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "latte-vainilla",
+      "categoryId": "cafeteria",
+      "name": "Latte de vainilla",
+      "description": "Latte suave con vainilla natural y crema ligera.",
+      "price": 3900,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [],
+      "sort": 3
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "brunch-club",
+      "categoryId": "brunch",
+      "name": "Brunch club",
+      "description": "Huevos revueltos, palta, tostadas, fruta fresca y café filtrado.",
+      "price": 10900,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "tostada-paltra",
+      "categoryId": "brunch",
+      "name": "Tostada de palta",
+      "description": "Pan de masa madre, palta, huevo pochado, semillas y aceite de oliva.",
+      "price": 7900,
+      "image": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "panqueques-frutos",
+      "categoryId": "brunch",
+      "name": "Panqueques con frutos rojos",
+      "description": "Panqueques esponjosos con berries, miel y crema batida.",
+      "price": 7200,
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo"
+      ],
+      "sort": 3
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "risotto-hongos",
+      "categoryId": "fondos",
+      "name": "Risotto de hongos",
+      "description": "Arroz cremoso, mix de hongos, parmesano y aceite de trufa.",
+      "price": 11900,
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "salmon-citrico",
+      "categoryId": "fondos",
+      "name": "Salmón cítrico",
+      "description": "Salmón grillado con papas rústicas, ensalada verde y salsa de limón.",
+      "price": 13900,
+      "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "bowl-mediterraneo",
+      "categoryId": "fondos",
+      "name": "Bowl mediterráneo",
+      "description": "Quinoa, hummus, vegetales asados, hojas verdes y dressing de yogurt.",
+      "price": 8900,
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo"
+      ],
+      "sort": 3
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "sandwich-brisket",
+      "categoryId": "sandwiches",
+      "name": "Sándwich brisket",
+      "description": "Brisket cocido lentamente, cebolla caramelizada, queso y salsa ahumada.",
+      "price": 9800,
+      "image": "https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "croissant-pollo",
+      "categoryId": "sandwiches",
+      "name": "Croissant de pollo",
+      "description": "Croissant artesanal con pollo, hojas verdes, tomate y mayonesa casera.",
+      "price": 7600,
+      "image": "https://images.unsplash.com/photo-1603903631889-b5f3ba4d5b9b?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [
+        "gluten",
+        "lácteos"
+      ],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "cheesecake-maracuya",
+      "categoryId": "postres",
+      "name": "Cheesecake de maracuyá",
+      "description": "Base crocante, crema suave y salsa ácida de maracuyá.",
+      "price": 5200,
+      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [
+        "gluten",
+        "lácteos"
+      ],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "torta-chocolate",
+      "categoryId": "postres",
+      "name": "Torta húmeda de chocolate",
+      "description": "Bizcocho de cacao, ganache intenso y crema inglesa.",
+      "price": 5900,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "limonada-menta",
+      "categoryId": "bebidas",
+      "name": "Limonada menta jengibre",
+      "description": "Limón natural, menta fresca, jengibre y hielo frappé.",
+      "price": 3900,
+      "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "kombucha-berries",
+      "categoryId": "bebidas",
+      "name": "Kombucha berries",
+      "description": "Kombucha fría con frutos rojos, notas florales y burbuja natural.",
+      "price": 4600,
+      "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo"
+      ],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "spritz-casa",
+      "categoryId": "bar",
+      "name": "Spritz de la casa",
+      "description": "Aperitivo cítrico, espumante, soda y naranja fresca.",
+      "price": 6900,
+      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 1
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "tabla-compartir",
+      "categoryId": "bar",
+      "name": "Tabla para compartir",
+      "description": "Quesos, charcutería, frutos secos, panes y encurtidos.",
+      "price": 14900,
+      "image": "https://images.unsplash.com/photo-1541544181051-e46607bc22a4?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 2
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        },
+        {
+          "id": "grande",
+          "name": "Grande",
+          "price_delta": 700
+        }
+      ],
+      "extras": [
+        {
+          "id": "leche-avena",
+          "name": "Leche de avena",
+          "price": 600
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "roll-canela",
+      "categoryId": "cafeteria",
+      "name": "Roll de canela",
+      "description": "Masa suave, canela, glaseado cítrico y nueces tostadas.",
+      "price": 3900,
+      "image": "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 4
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        },
+        {
+          "id": "grande",
+          "name": "Grande",
+          "price_delta": 700
+        }
+      ],
+      "extras": [
+        {
+          "id": "leche-avena",
+          "name": "Leche de avena",
+          "price": 600
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "chai-avena",
+      "categoryId": "cafeteria",
+      "name": "Chai latte avena",
+      "description": "Té especiado con leche de avena, canela y cardamomo.",
+      "price": 4100,
+      "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo"
+      ],
+      "sort": 5
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "granola-casa",
+      "categoryId": "brunch",
+      "name": "Granola de la casa",
+      "description": "Yogurt natural, granola, fruta de estación y miel.",
+      "price": 5900,
+      "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 4
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [
+        "vegano"
+      ],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "ensalada-quinoa",
+      "categoryId": "fondos",
+      "name": "Ensalada tibia de quinoa",
+      "description": "Quinoa, zapallo asado, hojas verdes, almendras y dressing cítrico.",
+      "price": 8600,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo"
+      ],
+      "sort": 4
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "gnocchi-pesto",
+      "categoryId": "fondos",
+      "name": "Gnocchi al pesto",
+      "description": "Gnocchi de papa, pesto de albahaca, tomates confitados y parmesano.",
+      "price": 9900,
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [],
+      "sort": 5
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [
+        "vegano"
+      ],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "sandwich-veggie",
+      "categoryId": "sandwiches",
+      "name": "Sándwich veggie",
+      "description": "Pan ciabatta, hummus, berenjena asada, rúcula y tomate.",
+      "price": 7900,
+      "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 3
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [
+        "gluten",
+        "lácteos"
+      ],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "brownie-nueces",
+      "categoryId": "postres",
+      "name": "Brownie con nueces",
+      "description": "Chocolate intenso, nueces y salsa tibia de manjar.",
+      "price": 4700,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "popular"
+      ],
+      "sort": 3
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [
+        "gluten",
+        "lácteos"
+      ],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "tarta-limon",
+      "categoryId": "postres",
+      "name": "Tarta de limón",
+      "description": "Masa sablé, crema de limón y merengue italiano.",
+      "price": 5100,
+      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [],
+      "sort": 4
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "jugo-temporada",
+      "categoryId": "bebidas",
+      "name": "Jugo de temporada",
+      "description": "Fruta de estación prensada al momento.",
+      "price": 4300,
+      "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "nuevo"
+      ],
+      "sort": 3
+    },
+    {
+      "business_id": "cafe-raiz",
+      "branch_ids": [
+        "providencia",
+        "nunoa"
+      ],
+      "variants": [
+        {
+          "id": "regular",
+          "name": "Regular",
+          "price_delta": 0
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-palta",
+          "name": "Extra palta",
+          "price": 1200
+        }
+      ],
+      "allergens": [],
+      "dietary": [],
+      "available_days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "available_hours": null,
+      "seasonal": false,
+      "sold_out": false,
+      "id": "negroni-cafe",
+      "categoryId": "bar",
+      "name": "Negroni café",
+      "description": "Gin, vermut, bitter y cold brew de la casa.",
+      "price": 7900,
+      "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=900&q=80",
+      "available": true,
+      "badges": [
+        "recomendado"
+      ],
+      "sort": 3
+    }
+  ]
+}
