@@ -1,49 +1,63 @@
 {
   "settings": {
-    "name": "Café Raíz",
-    "slogan": "Cocina de estación, café de especialidad y encuentros de barrio.",
-    "address": "Av. Providencia 2148, Providencia",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Santiago+Chile",
-    "hours": "Lunes a domingo · 8:30 a 23:00",
-    "whatsapp": "56912345678",
+    "name": "Alma Café",
+    "slogan": "Café de especialidad, brunch y momentos con alma.",
+    "address": "Av. Alonso de Córdova 3120, Vitacura",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Av.+Alonso+de+C%C3%B3rdova+3120+Vitacura+Santiago+Chile",
+    "hours": "Lunes a domingo · 8:30 a 21:30",
+    "whatsapp": "56945678901",
     "instagram": "https://www.instagram.com/",
-    "instagramHandle": "@elcafedigital",
-    "email": "hola@elcafedigital.cl",
-    "city": "Santiago",
-    "brandColor": "#2F6B47",
-    "accentColor": "#D6A85A",
-    "slogan_en": "Premium digital menus for cafés, restaurants, and bars.",
-    "hours_en": "Monday to Sunday · 8:30 AM - 11:00 PM",
-    "business_id": "cafe-raiz",
+    "instagramHandle": "@almacafe.cl",
+    "email": "hola@almacafe.cl",
+    "city": "Vitacura, Santiago",
+    "brandColor": "#3B3128",
+    "accentColor": "#9A8F63",
+    "slogan_en": "Specialty coffee, brunch, and soulful everyday moments.",
+    "hours_en": "Monday to Sunday · 8:30 AM - 9:30 PM",
+    "business_id": "alma-cafe",
     "reviewCta": "Déjanos tu opinión",
     "newsletterTitle": "Recibe nuestras novedades",
     "newsletterText": "Entérate del menú del día, eventos y promociones especiales.",
     "theme": {
-      "logoUrl": "",
+      "logoUrl": "/images/branding/logo/alma-cafe-logo.png",
       "colors": {
-        "paper": "#F7F4EE",
-        "ink": "#24282A",
-        "forest": "#2F6B47",
-        "mint": "#BFE5CB",
-        "accent": "#D6A85A"
+        "paper": "#F5EFE6",
+        "ink": "#26211D",
+        "forest": "#6F7653",
+        "mint": "#D8D1BD",
+        "accent": "#A9855D"
       },
       "radius": "18px",
       "buttonStyle": "pill",
       "cardStyle": "soft-shadow",
-      "tone": "cercano, cálido y gastronómico"
-    }
+      "tone": "premium, cálido y contemporáneo"
+    },
+    "description": "Alma Café es un espacio contemporáneo de café de especialidad, brunch y pastelería artesanal, creado para disfrutar cada momento con calma.",
+    "seoTitle": "Alma Café | Café de especialidad, brunch y pastelería",
+    "seoDescription": "Descubre Alma Café: café de especialidad, brunch, pastelería artesanal y una experiencia cálida y contemporánea.",
+    "logoUrl": "/images/branding/logo/alma-cafe-logo.png",
+    "heroImage": "/images/branding/hero/alma-cafe-hero-main.webp",
+    "heroImageAlt": "Interior de Alma Café con clientes disfrutando café de especialidad y brunch.",
+    "interiorImage": "/images/branding/interior/alma-cafe-interior-premium.webp",
+    "interiorImageAlt": "Interior de Alma Café con madera natural, barra de café y clientes compartiendo brunch.",
+    "storefrontImage": "/images/branding/interior/alma-cafe-storefront-exterior.webp",
+    "storefrontImageAlt": "Fachada contemporánea de Alma Café con terraza y acceso principal.",
+    "storyTitle": "Un café contemporáneo con pausa propia",
+    "storyText": "Alma Café combina café de especialidad, brunch y pastelería artesanal en un espacio cálido, minimalista y pensado para disfrutar con calma.",
+    "poweredByName": "Espíritu Digital",
+    "poweredByUrl": ""
   },
   "promotions": [
     {
       "id": "menu-dia",
-      "title": "Menú del día",
-      "subtitle": "Plato principal, bebida y café por tiempo limitado.",
-      "badge": "Hoy",
-      "cta": "Ver recomendados",
-      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80",
+      "title": "Sabores de temporada",
+      "subtitle": "Preparaciones destacadas de cocina, café y pastelería para disfrutar con calma.",
+      "badge": "Especial",
+      "cta": "Ver destacados",
+      "image": "/images/branding/promotions/alma-cafe-afternoon-coffee-desserts.webp",
       "active": true,
       "sort": 1,
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -53,14 +67,14 @@
     },
     {
       "id": "brunch",
-      "title": "Brunch de fin de semana",
-      "subtitle": "Opciones dulces, saladas y café de especialidad.",
-      "badge": "Sáb · Dom",
+      "title": "Brunch Alma",
+      "subtitle": "Una pausa especial para comenzar el día con café de especialidad y cocina artesanal.",
+      "badge": "Fin de semana",
       "cta": "Explorar brunch",
-      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=80",
+      "image": "/images/branding/promotions/alma-cafe-brunch-banner.webp",
       "active": true,
       "sort": 2,
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -70,14 +84,14 @@
     },
     {
       "id": "happy-hour",
-      "title": "Happy hour",
-      "subtitle": "Coctelería, tablas y cervezas para cerrar el día.",
-      "badge": "18:00 - 20:00",
-      "cta": "Ver bar",
-      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
+      "title": "La hora del café",
+      "subtitle": "Pastelería artesanal, espresso y bebidas de la casa para la tarde.",
+      "badge": "Tarde",
+      "cta": "Ver cafetería",
+      "image": "/images/branding/promotions/alma-cafe-afternoon-coffee-desserts.webp",
       "active": true,
       "sort": 3,
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -151,10 +165,10 @@
   "categories": [
     {
       "id": "cafeteria",
-      "name": "Cafetería",
+      "name": "Cafés",
       "emoji": "☕",
       "sort": 1,
-      "name_en": "Coffee Bar"
+      "name_en": "Coffee"
     },
     {
       "id": "brunch",
@@ -179,29 +193,29 @@
     },
     {
       "id": "postres",
-      "name": "Postres",
+      "name": "Pastelería",
       "emoji": "🍰",
       "sort": 5,
-      "name_en": "Desserts"
+      "name_en": "Pastries"
     },
     {
       "id": "bebidas",
-      "name": "Bebidas",
+      "name": "Bebidas frías",
       "emoji": "🥤",
       "sort": 6,
-      "name_en": "Drinks"
+      "name_en": "Cold Drinks"
     },
     {
       "id": "bar",
-      "name": "Bar",
+      "name": "Tarde Alma",
       "emoji": "🍹",
       "sort": 7,
-      "name_en": "Bar"
+      "name_en": "Afternoon"
     }
   ],
   "products": [
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -244,7 +258,7 @@
       "name": "Espresso tonic",
       "description": "Espresso doble, tónica premium, hielo y piel de naranja.",
       "price": 4200,
-      "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-specialty-coffee.webp",
       "available": true,
       "badges": [
         "nuevo",
@@ -253,7 +267,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -294,9 +308,9 @@
       "id": "flat-white",
       "categoryId": "cafeteria",
       "name": "Flat white",
-      "description": "Café de especialidad con leche texturizada y doble shot.",
+      "description": "Espresso de especialidad, leche texturizada y terminación sedosa en taza de cerámica.",
       "price": 3600,
-      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-specialty-coffee.webp",
       "available": true,
       "badges": [
         "popular"
@@ -304,7 +318,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -345,15 +359,15 @@
       "id": "latte-vainilla",
       "categoryId": "cafeteria",
       "name": "Latte de vainilla",
-      "description": "Latte suave con vainilla natural y crema ligera.",
+      "description": "Latte suave con vainilla natural, espresso de la casa y leche cremosa.",
       "price": 3900,
-      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-specialty-coffee.webp",
       "available": true,
       "badges": [],
       "sort": 3
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -388,10 +402,10 @@
       "sold_out": false,
       "id": "brunch-club",
       "categoryId": "brunch",
-      "name": "Brunch club",
-      "description": "Huevos revueltos, palta, tostadas, fruta fresca y café filtrado.",
+      "name": "Brunch Alma",
+      "description": "Huevos, pan artesanal, palta, vegetales de estación y café de especialidad.",
       "price": 10900,
-      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-brunch-signature.webp",
       "available": true,
       "badges": [
         "recomendado"
@@ -399,7 +413,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -435,9 +449,9 @@
       "id": "tostada-paltra",
       "categoryId": "brunch",
       "name": "Tostada de palta",
-      "description": "Pan de masa madre, palta, huevo pochado, semillas y aceite de oliva.",
+      "description": "Pan de masa madre, palta, hojas frescas, semillas tostadas y aceite de oliva.",
       "price": 7900,
-      "image": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-brunch-signature.webp",
       "available": true,
       "badges": [
         "popular"
@@ -445,7 +459,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -481,9 +495,9 @@
       "id": "panqueques-frutos",
       "categoryId": "brunch",
       "name": "Panqueques con frutos rojos",
-      "description": "Panqueques esponjosos con berries, miel y crema batida.",
+      "description": "Panqueques esponjosos, crema suave, frutos rojos y miel de la casa.",
       "price": 7200,
-      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-brunch-signature.webp",
       "available": true,
       "badges": [
         "nuevo"
@@ -491,7 +505,7 @@
       "sort": 3
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -537,7 +551,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -583,7 +597,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -629,7 +643,7 @@
       "sort": 3
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -675,7 +689,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -719,7 +733,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -757,10 +771,10 @@
       "sold_out": false,
       "id": "cheesecake-maracuya",
       "categoryId": "postres",
-      "name": "Cheesecake de maracuyá",
-      "description": "Base crocante, crema suave y salsa ácida de maracuyá.",
+      "name": "Tarta Alma de maracuyá",
+      "description": "Base crocante, crema ligera, maracuyá y fruta fresca.",
       "price": 5200,
-      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-artisanal-pastries.webp",
       "available": true,
       "badges": [
         "recomendado"
@@ -768,7 +782,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -807,9 +821,9 @@
       "id": "torta-chocolate",
       "categoryId": "postres",
       "name": "Torta húmeda de chocolate",
-      "description": "Bizcocho de cacao, ganache intenso y crema inglesa.",
+      "description": "Chocolate intenso, textura húmeda y terminación elegante para la hora del café.",
       "price": 5900,
-      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-artisanal-pastries.webp",
       "available": true,
       "badges": [
         "popular"
@@ -817,7 +831,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -855,7 +869,7 @@
       "name": "Limonada menta jengibre",
       "description": "Limón natural, menta fresca, jengibre y hielo frappé.",
       "price": 3900,
-      "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/promotions/alma-cafe-afternoon-coffee-desserts.webp",
       "available": true,
       "badges": [
         "popular"
@@ -863,7 +877,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -901,7 +915,7 @@
       "name": "Kombucha berries",
       "description": "Kombucha fría con frutos rojos, notas florales y burbuja natural.",
       "price": 4600,
-      "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/promotions/alma-cafe-afternoon-coffee-desserts.webp",
       "available": true,
       "badges": [
         "nuevo"
@@ -909,7 +923,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -955,7 +969,7 @@
       "sort": 1
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1001,7 +1015,7 @@
       "sort": 2
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1044,7 +1058,7 @@
       "name": "Roll de canela",
       "description": "Masa suave, canela, glaseado cítrico y nueces tostadas.",
       "price": 3900,
-      "image": "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-artisanal-pastries.webp",
       "available": true,
       "badges": [
         "popular"
@@ -1052,7 +1066,7 @@
       "sort": 4
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1095,7 +1109,7 @@
       "name": "Chai latte avena",
       "description": "Té especiado con leche de avena, canela y cardamomo.",
       "price": 4100,
-      "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-specialty-coffee.webp",
       "available": true,
       "badges": [
         "nuevo"
@@ -1103,7 +1117,7 @@
       "sort": 5
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1141,7 +1155,7 @@
       "name": "Granola de la casa",
       "description": "Yogurt natural, granola, fruta de estación y miel.",
       "price": 5900,
-      "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-brunch-signature.webp",
       "available": true,
       "badges": [
         "recomendado"
@@ -1149,7 +1163,7 @@
       "sort": 4
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1197,7 +1211,7 @@
       "sort": 4
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1241,7 +1255,7 @@
       "sort": 5
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1289,7 +1303,7 @@
       "sort": 3
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1330,7 +1344,7 @@
       "name": "Brownie con nueces",
       "description": "Chocolate intenso, nueces y salsa tibia de manjar.",
       "price": 4700,
-      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-artisanal-pastries.webp",
       "available": true,
       "badges": [
         "popular"
@@ -1338,7 +1352,7 @@
       "sort": 3
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1379,13 +1393,13 @@
       "name": "Tarta de limón",
       "description": "Masa sablé, crema de limón y merengue italiano.",
       "price": 5100,
-      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/products/alma-cafe-artisanal-pastries.webp",
       "available": true,
       "badges": [],
       "sort": 4
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1431,7 +1445,7 @@
       "sort": 3
     },
     {
-      "business_id": "cafe-raiz",
+      "business_id": "alma-cafe",
       "branch_ids": [
         "providencia",
         "nunoa"
@@ -1466,10 +1480,10 @@
       "sold_out": false,
       "id": "negroni-cafe",
       "categoryId": "bar",
-      "name": "Negroni café",
-      "description": "Gin, vermut, bitter y cold brew de la casa.",
+      "name": "Cold brew tonic",
+      "description": "Cold brew de la casa, tónica, cítricos y hielo cristalino.",
       "price": 7900,
-      "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=900&q=80",
+      "image": "/images/branding/promotions/alma-cafe-afternoon-coffee-desserts.webp",
       "available": true,
       "badges": [
         "recomendado"

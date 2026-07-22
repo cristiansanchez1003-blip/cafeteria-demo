@@ -16,6 +16,7 @@ import BranchSelector from '@/components/menu/BranchSelector'
 import NewsletterSection from '@/components/menu/NewsletterSection'
 import ReviewsSection from '@/components/menu/ReviewsSection'
 import ActionForms from '@/components/menu/ActionForms'
+import BrandStory from '@/components/menu/BrandStory'
 import { trackEvent, usePlatform } from '@/hooks/usePlatform'
 
 function SkeletonMenu() {
@@ -183,8 +184,8 @@ function MenuContent() {
             />
 
             {activePromotions.length > 0 && (
-              <section className="mx-auto max-w-6xl px-4 pt-7 sm:px-6 lg:pt-10">
-                <div className="no-scrollbar flex gap-4 overflow-x-auto pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible">
+              <section className="mx-auto max-w-6xl overflow-hidden px-4 pt-7 sm:px-6 lg:pt-10">
+                <div className="no-scrollbar flex gap-4 overflow-x-auto overscroll-x-contain pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible">
                   {activePromotions.map((promotion) => (
                     <PromoBanner key={promotion.id} promotion={promotion} />
                   ))}
@@ -192,8 +193,10 @@ function MenuContent() {
               </section>
             )}
 
+            <BrandStory settings={settings} />
+
             {featuredProducts.length > 0 && (
-              <section className="mx-auto max-w-6xl px-4 pt-9 sm:px-6 lg:pt-12">
+              <section id="carta" className="mx-auto max-w-6xl scroll-mt-24 overflow-hidden px-4 pt-9 sm:px-6 lg:pt-12">
                 <div className="mb-4 flex items-end justify-between gap-4">
                   <div>
                     <p className="text-[11px] font-black uppercase tracking-[0.2em] text-forest dark:text-mint">
@@ -207,7 +210,7 @@ function MenuContent() {
                     </p>
                   </div>
                 </div>
-                <div className="no-scrollbar flex gap-3 overflow-x-auto pb-2">
+                <div className="no-scrollbar flex gap-3 overflow-x-auto overscroll-x-contain pb-2">
                   {featuredProducts.map((product) => (
                     <ProductCard
                       key={product.id}
@@ -268,11 +271,13 @@ function MenuContent() {
               </motion.section>
             </AnimatePresence>
 
-            <ActionForms
-              branchId={selectedBranch?.id}
-              qrSourceId={qrSourceId}
-              featuredProduct={featuredProducts[0] || availableProducts[0]}
-            />
+            <div id="reservas" className="scroll-mt-24">
+              <ActionForms
+                branchId={selectedBranch?.id}
+                qrSourceId={qrSourceId}
+                featuredProduct={featuredProducts[0] || availableProducts[0]}
+              />
+            </div>
             <NewsletterSection settings={settings} branchId={selectedBranch?.id} qrSourceId={qrSourceId} />
             <ReviewsSection branch={selectedBranch} reviews={platform?.reviews || []} qrSourceId={qrSourceId} />
           </>

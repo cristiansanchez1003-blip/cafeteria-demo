@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function ProductImage({ src, alt, emoji, className = '' }) {
@@ -17,12 +18,15 @@ export default function ProductImage({ src, alt, emoji, className = '' }) {
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      loading="lazy"
-      onError={() => setFailed(true)}
-      className={`object-cover ${className}`}
-    />
+    <div className={`relative overflow-hidden ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 640px) 38vw, (max-width: 1280px) 260px, 320px"
+        className="object-cover"
+        onError={() => setFailed(true)}
+      />
+    </div>
   )
 }

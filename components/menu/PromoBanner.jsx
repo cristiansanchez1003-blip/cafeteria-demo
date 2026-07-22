@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function PromoBanner({ promotion }) {
@@ -13,10 +14,12 @@ export default function PromoBanner({ promotion }) {
       className="group relative h-[210px] min-w-[86%] overflow-hidden rounded-[22px] bg-ink shadow-cardHover sm:h-[260px] sm:min-w-[420px] lg:min-w-0"
     >
       {promotion.image && (
-        <img
+        <Image
           src={promotion.image}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-78 transition duration-500 group-hover:scale-105"
+          alt={promotion.imageAlt || promotion.title || 'Promoción de Alma Café'}
+          fill
+          sizes="(max-width: 1024px) 86vw, 360px"
+          className="object-cover opacity-80 transition duration-500 group-hover:scale-105"
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-transparent" />

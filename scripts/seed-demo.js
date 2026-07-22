@@ -5,18 +5,18 @@ const root = process.cwd()
 const menuPath = path.join(root, 'data', 'menu.json')
 const platformPath = path.join(root, 'data', 'platform.json')
 
-const BUSINESS_ID = 'cafe-raiz'
+const BUSINESS_ID = 'alma-cafe'
 const branches = [
   {
     id: 'providencia',
     business_id: BUSINESS_ID,
     name: 'Casa Providencia',
     city: 'Santiago',
-    address: 'Av. Providencia 2148, Providencia',
+    address: 'Av. Alonso de C\u00f3rdova 3120, Vitacura',
     phone: '+56224567890',
     whatsapp: '56912345678',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Providencia+Santiago+Chile',
-    reviewUrl: 'https://www.google.com/search?q=Cafe+Raiz+Providencia+reviews',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Av.+Alonso+de+C%C3%B3rdova+3120+Vitacura+Santiago+Chile',
+    reviewUrl: 'https://www.google.com/search?q=Alma+Cafe+Vitacura+reviews',
     coordinates: { lat: -33.4267, lng: -70.6112 },
     menu_mode: 'shared',
     status: 'auto',
@@ -40,7 +40,7 @@ const branches = [
     phone: '+56226789123',
     whatsapp: '56987654321',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Irarr%C3%A1zaval+%C3%91u%C3%B1oa+Chile',
-    reviewUrl: 'https://www.google.com/search?q=Cafe+Raiz+Nunoa+reviews',
+    reviewUrl: 'https://www.google.com/search?q=Alma+Cafe+Nunoa+reviews',
     coordinates: { lat: -33.4543, lng: -70.5994 },
     menu_mode: 'shared',
     status: 'auto',
@@ -111,16 +111,24 @@ function seedMenu() {
   menu.settings = {
     ...menu.settings,
     business_id: BUSINESS_ID,
-    name: 'Café Raíz',
-    slogan: 'Cocina de estación, café de especialidad y encuentros de barrio.',
+    name: 'Alma Café',
+    slogan: 'Café de especialidad, brunch y momentos con alma.',
     address: branches[0].address,
     city: 'Santiago',
     whatsapp: branches[0].whatsapp,
+    heroImage: '/images/branding/hero/alma-cafe-hero-main.webp',
+    heroImageAlt: 'Interior de Alma Café con clientes disfrutando café de especialidad y brunch.',
+    interiorImage: '/images/branding/interior/alma-cafe-interior-premium.webp',
+    storefrontImage: '/images/branding/interior/alma-cafe-storefront-exterior.webp',
+    storyTitle: 'Un café contemporáneo con pausa propia',
+    storyText: 'Alma Café combina café de especialidad, brunch y pastelería artesanal en un espacio cálido, minimalista y pensado para disfrutar con calma.',
+    poweredByName: 'Espíritu Digital',
+    poweredByUrl: '',
     reviewCta: 'Déjanos tu opinión',
     newsletterTitle: 'Recibe nuestras novedades',
     newsletterText: 'Entérate del menú del día, eventos y promociones especiales.',
     theme: {
-      logoUrl: '',
+      logoUrl: '/images/branding/logo/alma-cafe-logo.png',
       colors: {
         paper: '#F7F4EE',
         ink: '#24282A',
@@ -196,7 +204,7 @@ function seedPlatform() {
     ['terraza-nunoa', 'Terraza Ñuñoa', 'nunoa', 'table'],
     ['instagram-bio', 'Instagram Bio', 'providencia', 'social'],
     ['google-business', 'Google Business', 'nunoa', 'external'],
-    ['evento-cata', 'Evento cata de café', 'providencia', 'event'],
+    ['evento-cata', 'Cata Alma Café', 'providencia', 'event'],
   ].map(([id, name, branch_id, type]) => ({
     id,
     business_id: BUSINESS_ID,
@@ -224,20 +232,20 @@ function seedPlatform() {
     businesses: [
       {
         id: BUSINESS_ID,
-        name: 'Café Raíz',
-        legal_name: 'Café Raíz SpA',
+        name: 'Alma Café',
+        legal_name: 'Alma Café SpA',
         plan: 'growth',
         status: 'active',
-        story: 'Café Raíz nació como una cafetería de barrio que mezcla café de especialidad, cocina de estación y una agenda pequeña de encuentros culturales.',
-        description: 'Cafetería-restaurante con brunch, almuerzos, pastelería, bar de tarde y productos para llevar.',
+        story: 'Alma Café nace como una cafetería contemporánea que une café de especialidad, brunch y pastelería artesanal en un ambiente cálido de madera natural, tonos piedra y detalles de diseño.',
+        description: 'Café premium con brunch, pastelería artesanal, bebidas de autor y una experiencia cálida y contemporánea.',
         created_at: addDays(-90),
       },
     ],
     users: [
       { id: 'user-superadmin', business_id: null, name: 'Equipo Plataforma', email: 'superadmin@cafedigital.cl', role: 'superadmin' },
-      { id: 'user-owner', business_id: BUSINESS_ID, name: 'Isidora Valdés', email: 'duena@caferaiz.cl', role: 'owner' },
-      { id: 'user-admin', business_id: BUSINESS_ID, name: 'Tomás Rojas', email: 'admin@caferaiz.cl', role: 'admin' },
-      { id: 'user-editor', business_id: BUSINESS_ID, name: 'Camila Soto', email: 'encargada@caferaiz.cl', role: 'editor' },
+      { id: 'user-owner', business_id: BUSINESS_ID, name: 'Isidora Valdés', email: 'duena@almacafe.cl', role: 'owner' },
+      { id: 'user-admin', business_id: BUSINESS_ID, name: 'Tomás Rojas', email: 'admin@almacafe.cl', role: 'admin' },
+      { id: 'user-editor', business_id: BUSINESS_ID, name: 'Camila Soto', email: 'encargada@almacafe.cl', role: 'editor' },
     ],
     roles: ['superadmin', 'owner', 'admin', 'editor'],
     branches,
@@ -280,4 +288,4 @@ function seedPlatform() {
 
 seedMenu()
 seedPlatform()
-console.log('Seed demo aplicado: Café Raíz, 2 sucursales, QR, eventos, reservas, pedidos y newsletter.')
+console.log('Seed demo aplicado: Alma Café, 2 sucursales, QR, eventos, reservas, pedidos y newsletter.')

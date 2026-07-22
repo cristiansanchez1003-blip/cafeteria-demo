@@ -33,7 +33,7 @@ export async function GET(request) {
   return new NextResponse(csv, {
     headers: {
       'Content-Type': 'text/csv; charset=utf-8',
-      'Content-Disposition': 'attachment; filename="newsletter-cafe-raiz.csv"',
+      'Content-Disposition': 'attachment; filename="newsletter-alma-cafe.csv"',
     },
   })
 }

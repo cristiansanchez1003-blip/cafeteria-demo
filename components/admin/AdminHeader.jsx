@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 export default function AdminHeader({ dirty, saving, onSave }) {
@@ -13,11 +14,17 @@ export default function AdminHeader({ dirty, saving, onSave }) {
   return (
     <header className="sticky top-0 z-40 border-b border-linen bg-paper/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:px-6">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ink font-playfair text-lg font-bold text-mint">
-          CR
+        <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-linen bg-white shadow-card">
+          <Image
+            src="/images/branding/logo/alma-cafe-logo.png"
+            alt="Alma Café logo"
+            fill
+            sizes="44px"
+            className="object-contain p-1.5"
+          />
         </span>
         <div>
-          <p className="font-lato text-[14px] font-black leading-tight text-ink">Café Raíz</p>
+          <p className="font-lato text-[14px] font-black leading-tight text-ink">Alma Café</p>
           <p className="hidden text-[12px] font-bold text-muted sm:block">Panel de administración</p>
         </div>
 

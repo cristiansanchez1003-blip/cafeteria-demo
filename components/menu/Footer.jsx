@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { localizedField } from '@/lib/i18n'
 import { useApp } from '@/contexts/AppContext'
@@ -47,13 +48,27 @@ export default function Footer({ settings, branch, qrSourceId, sessionId }) {
   const whatsapp = branch?.whatsapp || settings.whatsapp
   const address = branch?.address || settings.address
   const mapsUrl = branch?.mapsUrl || settings.mapsUrl
+  const brandName = settings.name || 'Alma Café'
+  const poweredBy = settings.poweredByName || 'Espíritu Digital'
+  const poweredByUrl = settings.poweredByUrl || ''
 
   return (
     <footer className="safe-bottom mt-8 bg-ink px-5 pb-10 pt-10 dark:bg-carddark">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
+          {settings.logoUrl && (
+            <div className="relative mb-5 h-16 w-36 overflow-hidden rounded-[14px] bg-white p-2 shadow-card">
+              <Image
+                src={settings.logoUrl}
+                alt={`${brandName} logo`}
+                fill
+                sizes="144px"
+                className="object-contain p-2"
+              />
+            </div>
+          )}
           <p className="text-[11px] font-black uppercase tracking-[0.22em] text-mint">
-            {settings.name || 'Café Raíz'}
+            {brandName}
           </p>
           <motion.h3
             className="mt-3 max-w-md font-playfair text-[32px] font-bold leading-tight text-white"
@@ -96,7 +111,7 @@ export default function Footer({ settings, branch, qrSourceId, sessionId }) {
           )}
 
           {settings.instagram && (
-            <ContactLink href={settings.instagram} label={t('instagram')} sub={settings.instagramHandle || '@caferaiz'}>
+            <ContactLink href={settings.instagram} label={t('instagram')} sub={settings.instagramHandle || '@almacafe.cl'}>
               <svg className="h-5.5 w-5.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" />
                 <circle cx="12" cy="12" r="4.2" />
@@ -133,9 +148,21 @@ export default function Footer({ settings, branch, qrSourceId, sessionId }) {
         </div>
       </div>
 
-      <p className="mx-auto mt-10 max-w-6xl text-[11.5px] text-white/35">
-        © {new Date().getFullYear()} {settings.name || 'Café Raíz'} · {branch?.city || settings.city || 'Chile'}
-      </p>
+      <div className="mx-auto mt-10 flex max-w-6xl flex-col gap-2 text-[11.5px] text-white/35 sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          © {new Date().getFullYear()} {brandName} · {branch?.city || settings.city || 'Chile'}
+        </p>
+        <p>
+          Powered by{' '}
+          {poweredByUrl ? (
+            <a href={poweredByUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-white/55 transition hover:text-mint">
+              {poweredBy}
+            </a>
+          ) : (
+            <span className="font-bold text-white/55">{poweredBy}</span>
+          )}
+        </p>
+      </div>
     </footer>
   )
 }

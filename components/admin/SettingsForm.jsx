@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 export default function SettingsForm({ settings, onSave }) {
@@ -43,6 +44,43 @@ export default function SettingsForm({ settings, onSave }) {
             Estos datos alimentan portada, footer, contacto y piezas comerciales del menú.
           </p>
         </div>
+      </div>
+
+      <div className="mt-5 grid gap-4 rounded-[18px] border border-linen bg-paper p-3 md:grid-cols-[180px_1fr_auto] md:items-center">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-ink">
+          {form.heroImage ? (
+            <Image
+              src={form.heroImage}
+              alt={form.heroImageAlt || 'Vista previa de la carta pública'}
+              fill
+              sizes="180px"
+              className="object-cover"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-sm font-bold text-white/60">
+              Sin hero
+            </div>
+          )}
+        </div>
+        <div>
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-forest">
+            Así luce actualmente tu carta
+          </p>
+          <h3 className="mt-1 font-playfair text-[26px] font-bold leading-tight text-ink">
+            {form.name || 'Alma Café'}
+          </h3>
+          <p className="mt-1 text-[13px] leading-relaxed text-muted">
+            Estado publicado · Hero, logo y textos conectados a la carta pública.
+          </p>
+        </div>
+        <a
+          href="/menu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex justify-center rounded-full bg-ink px-5 py-3 text-[13px] font-black text-mint"
+        >
+          Previsualizar
+        </a>
       </div>
 
       <div className="mt-5 grid gap-3.5 md:grid-cols-2">

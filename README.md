@@ -1,4 +1,4 @@
-# Cafe Raiz - Demo SaaS gastronomica
+# Alma Cafe - Demo SaaS gastronomica
 
 Demo funcional de un ecosistema digital para cafeterias, restaurantes y bares. La carta publica es la puerta de entrada, pero el producto tambien administra sucursales, QR, promociones, reservas, pedidos, newsletter, resenas, integraciones, salud digital, metricas y recomendaciones accionables.
 
@@ -26,9 +26,9 @@ Stack: **Next.js 14**, **Tailwind CSS**, **Framer Motion**, **qrcode.react** y p
 La autenticacion actual usa `ADMIN_USER` y `ADMIN_PASSWORD`. El seed crea usuarios/roles dentro de `data/platform.json` para modelar multi-tenant:
 
 - `superadmin@cafedigital.cl`: superadmin.
-- `duena@caferaiz.cl`: propietario.
-- `admin@caferaiz.cl`: administrador.
-- `encargada@caferaiz.cl`: editor.
+- `duena@almacafe.cl`: propietario.
+- `admin@almacafe.cl`: administrador.
+- `encargada@almacafe.cl`: editor.
 
 La UI ya representa esos roles en datos, pero el control granular por rol sigue pendiente de migrar a una base real con sesiones multiusuario.
 
@@ -64,7 +64,7 @@ npm run seed
 
 El seed es idempotente y crea:
 
-- Negocio ficticio realista: Cafe Raiz.
+- Negocio ficticio realista: Alma Cafe.
 - 2 sucursales: Casa Providencia y Terraza Nunoa.
 - 25+ productos con variantes, extras, alergenos, disponibilidad, temporada y etiquetas.
 - Promociones, menu del dia, brunch y happy hour.

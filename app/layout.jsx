@@ -16,18 +16,20 @@ const lato = Lato({
 })
 
 export const metadata = {
-  title: 'Café Raíz · Ecosistema Gastronómico',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  title: 'Alma Café | Café de especialidad, brunch y pastelería',
   description:
-    'Demo funcional de un ecosistema SaaS para cafeterías, restaurantes y bares con carta, QR, analítica, reservas, pedidos y crecimiento.',
+    'Descubre Alma Café: café de especialidad, brunch, pastelería artesanal y una experiencia cálida y contemporánea.',
   openGraph: {
-    title: 'Café Raíz',
-    description: 'Carta digital y sistema operativo gastronómico para locales modernos.',
+    title: 'Alma Café',
+    description: 'Café de especialidad, brunch y pastelería artesanal en una carta digital premium.',
     type: 'website',
+    images: ['/images/branding/hero/alma-cafe-hero-main.webp'],
   },
 }
 
 export const viewport = {
-  themeColor: '#24282A',
+  themeColor: '#26211D',
   width: 'device-width',
   initialScale: 1,
 }

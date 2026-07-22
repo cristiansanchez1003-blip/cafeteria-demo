@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
-  const businessId = searchParams.get('business_id') || 'cafe-raiz'
+  const businessId = searchParams.get('business_id') || 'alma-cafe'
   const branchId = searchParams.get('branch') || 'all'
   const days = searchParams.get('days') || '7'
 

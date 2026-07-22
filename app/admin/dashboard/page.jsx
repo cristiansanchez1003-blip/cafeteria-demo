@@ -154,7 +154,7 @@ export default function DashboardPage() {
                 Sistema operativo gastronómico
               </p>
               <h1 className="mt-2 font-playfair text-[34px] font-bold leading-tight sm:text-[44px]">
-                Admin de {menu.settings?.name || 'Café Raíz'}
+                Admin de {menu.settings?.name || 'Alma Café'}
               </h1>
               <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-white/64">
                 Carta, operaciones, QR, clientes, reseñas, campañas y crecimiento desde una sola plataforma.

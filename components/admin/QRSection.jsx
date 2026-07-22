@@ -26,14 +26,14 @@ export default function QRSection({ sources = [], branches = [] }) {
     const url = canvas.toDataURL('image/png')
     const link = document.createElement('a')
     link.href = url
-    link.download = `qr-${source?.id || 'menu'}-cafe-raiz.png`
+    link.download = `qr-${source?.id || 'menu'}-alma-cafe.png`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
   }
 
   function handleDownloadSvg() {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360"><rect width="100%" height="100%" fill="#F7F4EE"/><text x="24" y="38" font-family="Arial" font-size="18" font-weight="700" fill="#24282A">${source?.name || 'QR menú'}</text><text x="24" y="62" font-family="Arial" font-size="12" fill="#6E7370">${menuUrl}</text></svg>`
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360"><rect width="100%" height="100%" fill="#F5EFE6"/><text x="24" y="38" font-family="Arial" font-size="18" font-weight="700" fill="#26211D">${source?.name || 'QR menú'}</text><text x="24" y="62" font-family="Arial" font-size="12" fill="#6E7370">${menuUrl}</text></svg>`
     const blob = new Blob([svg], { type: 'image/svg+xml' })
     const link = document.createElement('a')
     link.href = URL.createObjectURL(blob)

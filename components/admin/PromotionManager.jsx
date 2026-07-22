@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 
 function slugify(value) {
@@ -65,9 +66,9 @@ export default function PromotionManager({ promotions = [], onSave, onDelete, on
           return (
             <article key={promotion.id} className="overflow-hidden rounded-[18px] border border-linen bg-paper">
               <div className="flex flex-col gap-3 p-3 sm:flex-row sm:items-center">
-                <div className="h-28 w-full overflow-hidden rounded-[14px] bg-mintsoft sm:w-44">
+                <div className="relative h-28 w-full overflow-hidden rounded-[14px] bg-mintsoft sm:w-44">
                   {promotion.image ? (
-                    <img src={promotion.image} alt="" className="h-full w-full object-cover" />
+                    <Image src={promotion.image} alt="" fill sizes="(min-width: 640px) 176px, 100vw" className="object-cover" />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center text-2xl">☕</div>
                   )}

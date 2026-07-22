@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const BADGE_OPTIONS = [
   { id: 'nuevo', label: 'Nuevo' },
@@ -121,9 +122,9 @@ export default function ProductForm({ product, categories, onSave, onClose, uplo
 
             <div className="grid gap-4 md:grid-cols-[180px_1fr]">
               <div>
-                <div className="aspect-square overflow-hidden rounded-[18px] border border-linen bg-mintsoft">
+                <div className="relative aspect-square overflow-hidden rounded-[18px] border border-linen bg-mintsoft">
                   {form.image ? (
-                    <img src={form.image} alt="" className="h-full w-full object-cover" />
+                    <Image src={form.image} alt="" fill sizes="180px" className="object-cover" />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center text-3xl">☕</div>
                   )}

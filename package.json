@@ -1,8 +1,8 @@
 {
-  "name": "cafe-raiz-saas-demo",
+  "name": "alma-cafe-saas-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "Demo de menú digital premium para cafeterías, restaurantes y bares",
+  "description": "Demo de menu digital premium para Alma Cafe y locales gastronomicos",
   "engines": {
     "node": ">=20.9.0"
   },

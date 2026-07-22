@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { formatCLP } from '@/lib/format'
 
 const BADGE_LABELS = {
@@ -24,9 +25,9 @@ export default function ProductTable({
             p.available === false ? 'opacity-55' : ''
           }`}
         >
-          <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-mintsoft">
+          <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-mintsoft">
             {p.image ? (
-              <img src={p.image} alt="" loading="lazy" className="h-full w-full object-cover" />
+              <Image src={p.image} alt="" fill sizes="56px" className="object-cover" />
             ) : (
               <div className="flex h-full w-full items-center justify-center text-lg">☕</div>
             )}

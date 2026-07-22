@@ -20,11 +20,11 @@ export default function CategoryNav({ categories, activeId, onSelect }) {
   }, [activeId])
 
   return (
-    <nav className="sticky top-0 z-30 border-b border-linen/70 bg-paper/92 backdrop-blur-xl dark:border-linendark/70 dark:bg-paperdark/92">
+    <nav className="sticky top-0 z-30 overflow-hidden border-b border-linen/70 bg-paper/92 backdrop-blur-xl dark:border-linendark/70 dark:bg-paperdark/92">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-3 py-3 sm:px-6">
         <div
           ref={barRef}
-          className="no-scrollbar flex min-w-0 flex-1 gap-2 overflow-x-auto"
+          className="no-scrollbar flex min-w-0 flex-1 gap-2 overflow-x-auto overscroll-x-contain"
           role="tablist"
           aria-label="Categorías del menú"
         >
