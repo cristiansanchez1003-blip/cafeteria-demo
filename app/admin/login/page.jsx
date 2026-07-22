@@ -59,8 +59,8 @@ export default function LoginPage() {
               className="object-contain p-2.5"
             />
           </span>
-          <h1 className="mt-4 font-playfair text-3xl font-bold">Alma Café</h1>
-          <p className="mt-1 text-[13px] font-bold text-white/62">Panel de administración</p>
+          <h1 className="text-image-outline-strong mt-4 font-playfair text-3xl font-bold">Alma Café</h1>
+          <p className="text-image-outline mt-1 text-[13px] font-bold text-white/82">Panel de administración</p>
         </div>
 
         <div className="rounded-[24px] border border-white/12 bg-paper p-6 shadow-cardHover">
@@ -112,7 +112,7 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <p className="mt-6 text-center text-[12px] text-white/48">
+        <p className="text-image-outline mt-6 text-center text-[12px] text-white/72">
           Ecosistema SaaS para cafeterías, restaurantes y bares
         </p>
       </motion.div>

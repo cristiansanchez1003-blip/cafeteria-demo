@@ -29,14 +29,14 @@ export default function BrandStory({ settings }) {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-ink/82 via-ink/18 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-7">
-            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mint">
+            <p className="text-image-outline text-[11px] font-black uppercase tracking-[0.2em] text-mint">
               Conoce {brandName}
             </p>
-            <h2 className="mt-2 max-w-xl font-playfair text-[30px] font-bold leading-tight sm:text-[40px]">
+            <h2 className="text-image-outline-strong mt-2 max-w-xl font-playfair text-[30px] font-bold leading-tight sm:text-[40px]">
               {settings.storyTitle || 'Una experiencia de café con calma'}
             </h2>
             {settings.storyText && (
-              <p className="mt-3 max-w-xl text-[14.5px] leading-relaxed text-white/76">
+              <p className="text-image-outline mt-3 max-w-xl text-[14.5px] leading-relaxed text-white/90">
                 {settings.storyText}
               </p>
             )}

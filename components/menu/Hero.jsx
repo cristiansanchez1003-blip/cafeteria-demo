@@ -47,10 +47,10 @@ export default function Hero({ settings, productCount = 0, promotionCount = 0 })
               />
             </span>
             <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mint">
+              <p className="text-image-outline text-[11px] font-black uppercase tracking-[0.2em] text-mint">
                 Demo gastronómica
               </p>
-              <p className="font-lato text-[14px] font-bold text-white/86">
+              <p className="text-image-outline font-lato text-[14px] font-bold text-white/86">
                 {settings?.city || 'Menú digital'}
               </p>
             </div>
@@ -62,14 +62,14 @@ export default function Hero({ settings, productCount = 0, promotionCount = 0 })
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="font-playfair text-[44px] font-bold leading-[0.94] text-white sm:text-[68px] lg:text-[86px]"
+            className="text-image-outline-strong font-playfair text-[44px] font-bold leading-[0.94] text-white sm:text-[68px] lg:text-[86px]"
           >
             {brandName}
           </motion.h1>
 
           {slogan && (
             <motion.p
-              className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/82 sm:text-[19px]"
+              className="text-image-outline mt-5 max-w-2xl text-[16px] leading-relaxed text-white/90 sm:text-[19px]"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.18, duration: 0.55 }}
@@ -92,12 +92,12 @@ export default function Hero({ settings, productCount = 0, promotionCount = 0 })
             </a>
             <a
               href="#reservas"
-              className="inline-flex rounded-full border border-white/18 bg-white/12 px-5 py-3 text-[13px] font-black text-white backdrop-blur transition active:scale-95"
+              className="text-image-outline inline-flex rounded-full border border-white/18 bg-white/12 px-5 py-3 text-[13px] font-black text-white backdrop-blur transition active:scale-95"
             >
               Reservar una mesa
             </a>
             {hours && (
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-white/12 px-4 py-2 text-[13px] font-bold text-white backdrop-blur">
+              <span className="text-image-outline inline-flex items-center gap-2 rounded-full border border-white/16 bg-white/12 px-4 py-2 text-[13px] font-bold text-white backdrop-blur">
                 <svg className="h-4 w-4 text-mint" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                   <circle cx="12" cy="12" r="9" />
                   <path d="M12 7v5l3 2" />
@@ -105,10 +105,10 @@ export default function Hero({ settings, productCount = 0, promotionCount = 0 })
                 {hours}
               </span>
             )}
-            <span className="inline-flex rounded-full border border-white/16 bg-white/12 px-4 py-2 text-[13px] font-bold text-white backdrop-blur">
+            <span className="text-image-outline inline-flex rounded-full border border-white/16 bg-white/12 px-4 py-2 text-[13px] font-bold text-white backdrop-blur">
               {productCount} productos
             </span>
-            <span className="inline-flex rounded-full border border-white/16 bg-white/12 px-4 py-2 text-[13px] font-bold text-white backdrop-blur">
+            <span className="text-image-outline inline-flex rounded-full border border-white/16 bg-white/12 px-4 py-2 text-[13px] font-bold text-white backdrop-blur">
               {promotionCount} campañas activas
             </span>
           </motion.div>
