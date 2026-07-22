@@ -49,7 +49,7 @@ export default function LoginPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <div className="mb-6 text-center text-white">
+        <div className="image-glass-panel mb-6 rounded-[24px] p-5 text-center text-white">
           <span className="relative mx-auto flex h-20 w-20 items-center justify-center overflow-hidden rounded-[22px] border border-white/16 bg-white shadow-cardHover">
             <Image
               src="/images/branding/logo/alma-cafe-logo.png"
@@ -59,8 +59,8 @@ export default function LoginPage() {
               className="object-contain p-2.5"
             />
           </span>
-          <h1 className="text-image-outline-strong mt-4 font-playfair text-3xl font-bold">Alma Café</h1>
-          <p className="text-image-outline mt-1 text-[13px] font-bold text-white/82">Panel de administración</p>
+          <h1 className="mt-4 font-playfair text-3xl font-bold">Alma Café</h1>
+          <p className="mt-1 text-[13px] font-bold text-white/82">Panel de administración</p>
         </div>
 
         <div className="rounded-[24px] border border-white/12 bg-paper p-6 shadow-cardHover">
@@ -112,7 +112,7 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <p className="text-image-outline mt-6 text-center text-[12px] text-white/72">
+        <p className="image-glass-chip mx-auto mt-6 max-w-xs rounded-full px-4 py-2 text-center text-[12px] text-white/82">
           Ecosistema SaaS para cafeterías, restaurantes y bares
         </p>
       </motion.div>

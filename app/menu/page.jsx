@@ -183,20 +183,8 @@ function MenuContent() {
               onSelect={handleBranchSelect}
             />
 
-            {activePromotions.length > 0 && (
-              <section className="mx-auto max-w-6xl overflow-hidden px-4 pt-7 sm:px-6 lg:pt-10">
-                <div className="no-scrollbar flex gap-4 overflow-x-auto overscroll-x-contain pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible">
-                  {activePromotions.map((promotion) => (
-                    <PromoBanner key={promotion.id} promotion={promotion} />
-                  ))}
-                </div>
-              </section>
-            )}
-
-            <BrandStory settings={settings} />
-
             {featuredProducts.length > 0 && (
-              <section id="carta" className="mx-auto max-w-6xl scroll-mt-24 overflow-hidden px-4 pt-9 sm:px-6 lg:pt-12">
+              <section id="carta" className="mx-auto max-w-6xl scroll-mt-24 overflow-hidden px-4 pt-5 sm:px-6 lg:pt-7">
                 <div className="mb-4 flex items-end justify-between gap-4">
                   <div>
                     <p className="text-[11px] font-black uppercase tracking-[0.2em] text-forest dark:text-mint">
@@ -231,7 +219,7 @@ function MenuContent() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -18 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
-                className="mx-auto max-w-6xl px-4 pb-10 pt-9 sm:px-6 lg:pb-16 lg:pt-12"
+                className="mx-auto max-w-6xl px-4 pb-8 pt-6 sm:px-6 lg:pb-12 lg:pt-8"
               >
                 {activeCategory && (
                   <div className="mb-5 flex items-center gap-3">
@@ -271,6 +259,16 @@ function MenuContent() {
               </motion.section>
             </AnimatePresence>
 
+            {activePromotions.length > 0 && (
+              <section className="mx-auto max-w-6xl overflow-hidden px-4 pb-2 pt-2 sm:px-6 lg:pt-4">
+                <div className="no-scrollbar flex gap-4 overflow-x-auto overscroll-x-contain pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible">
+                  {activePromotions.map((promotion) => (
+                    <PromoBanner key={promotion.id} promotion={promotion} />
+                  ))}
+                </div>
+              </section>
+            )}
+
             <div id="reservas" className="scroll-mt-24">
               <ActionForms
                 branchId={selectedBranch?.id}
@@ -278,8 +276,9 @@ function MenuContent() {
                 featuredProduct={featuredProducts[0] || availableProducts[0]}
               />
             </div>
-            <NewsletterSection settings={settings} branchId={selectedBranch?.id} qrSourceId={qrSourceId} />
             <ReviewsSection branch={selectedBranch} reviews={platform?.reviews || []} qrSourceId={qrSourceId} />
+            <BrandStory settings={settings} />
+            <NewsletterSection settings={settings} branchId={selectedBranch?.id} qrSourceId={qrSourceId} />
           </>
         )}
 

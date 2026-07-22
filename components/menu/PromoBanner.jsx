@@ -22,18 +22,18 @@ export default function PromoBanner({ promotion }) {
           className="object-cover opacity-80 transition duration-500 group-hover:scale-105"
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-6">
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/16 to-transparent" />
+      <div className="image-glass-panel absolute inset-x-3 bottom-3 rounded-[18px] p-4 text-white sm:p-5">
         {promotion.badge && (
-          <span className="text-image-outline inline-flex rounded-full bg-white/18 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] backdrop-blur">
+          <span className="inline-flex rounded-full bg-white/18 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] backdrop-blur">
             {promotion.badge}
           </span>
         )}
-        <h3 className="text-image-outline-strong mt-3 font-playfair text-[26px] font-bold leading-none sm:text-[32px]">
+        <h3 className="mt-3 font-playfair text-[25px] font-bold leading-none sm:text-[30px]">
           {promotion.title}
         </h3>
         {promotion.subtitle && (
-          <p className="text-image-outline mt-2 max-w-sm text-[13.5px] leading-relaxed text-white/90 sm:text-[14.5px]">
+          <p className="mt-2 max-w-sm text-[13.5px] leading-relaxed text-white/88 sm:text-[14px]">
             {promotion.subtitle}
           </p>
         )}

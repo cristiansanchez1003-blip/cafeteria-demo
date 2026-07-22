@@ -9,7 +9,7 @@ export default function BrandStory({ settings }) {
   const brandName = settings.name || 'Alma Café'
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:py-8">
+    <section className="mx-auto max-w-6xl px-4 pb-7 pt-5 sm:px-6 lg:pb-10 lg:pt-8">
       <div className="grid gap-4 lg:grid-cols-[1fr_0.78fr]">
         <motion.article
           className="relative min-h-[320px] overflow-hidden rounded-[22px] bg-ink shadow-cardHover"
@@ -27,16 +27,16 @@ export default function BrandStory({ settings }) {
               className="object-cover"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/82 via-ink/18 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-7">
-            <p className="text-image-outline text-[11px] font-black uppercase tracking-[0.2em] text-mint">
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/64 via-ink/10 to-transparent" />
+          <div className="image-glass-panel absolute inset-x-4 bottom-4 rounded-[20px] p-4 text-white sm:inset-x-6 sm:bottom-6 sm:p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mint">
               Conoce {brandName}
             </p>
-            <h2 className="text-image-outline-strong mt-2 max-w-xl font-playfair text-[30px] font-bold leading-tight sm:text-[40px]">
+            <h2 className="mt-2 max-w-xl font-playfair text-[29px] font-bold leading-tight sm:text-[38px]">
               {settings.storyTitle || 'Una experiencia de café con calma'}
             </h2>
             {settings.storyText && (
-              <p className="text-image-outline mt-3 max-w-xl text-[14.5px] leading-relaxed text-white/90">
+              <p className="mt-3 max-w-xl text-[14px] leading-relaxed text-white/88">
                 {settings.storyText}
               </p>
             )}

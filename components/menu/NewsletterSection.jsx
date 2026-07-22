@@ -1,18 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const PREFERENCES = [
-  ['menu-dia', 'Menú del día'],
+  ['menu-dia', 'Menu del dia'],
   ['promociones', 'Promociones'],
   ['eventos', 'Eventos'],
   ['nuevos-productos', 'Nuevos productos'],
-  ['temporada', 'Café de temporada'],
+  ['temporada', 'Cafe de temporada'],
 ]
 
 export default function NewsletterSection({ settings, branchId, qrSourceId }) {
   const [form, setForm] = useState({ email: '', name: '', consent: false, preferences: ['promociones'] })
   const [status, setStatus] = useState(null)
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (window.sessionStorage.getItem('alma-newsletter-dismissed') === 'true') return
+    const timer = window.setTimeout(() => setOpen(true), 15000)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   function set(field, value) {
     setForm((current) => ({ ...current, [field]: value }))
@@ -25,6 +32,11 @@ export default function NewsletterSection({ settings, branchId, qrSourceId }) {
         ? current.preferences.filter((item) => item !== id)
         : [...current.preferences, id],
     }))
+  }
+
+  function closeModal() {
+    window.sessionStorage.setItem('alma-newsletter-dismissed', 'true')
+    setOpen(false)
   }
 
   async function handleSubmit(e) {
@@ -48,23 +60,37 @@ export default function NewsletterSection({ settings, branchId, qrSourceId }) {
     setForm({ email: '', name: '', consent: false, preferences: ['promociones'] })
     setStatus({
       type: 'success',
-      message: data.duplicate ? 'Actualizamos tu suscripción.' : 'Listo. Te enviaremos novedades relevantes.',
+      message: data.duplicate ? 'Actualizamos tu suscripcion.' : 'Listo. Te enviaremos novedades relevantes.',
     })
+    window.sessionStorage.setItem('alma-newsletter-dismissed', 'true')
+    window.setTimeout(() => setOpen(false), 1200)
   }
 
+  if (!open) return null
+
   return (
-    <section className="mx-auto max-w-6xl px-4 pb-4 pt-4 sm:px-6">
-      <div className="grid gap-5 rounded-[22px] border border-linen bg-card p-5 shadow-card dark:border-linendark dark:bg-carddark lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p className="text-[11px] font-black uppercase tracking-[0.2em] text-forest dark:text-mint">
-            Comunidad
-          </p>
-          <h2 className="mt-2 font-playfair text-[28px] font-bold leading-tight text-ink dark:text-paper">
-            {settings?.newsletterTitle || 'Recibe nuestras novedades'}
-          </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-muted dark:text-muteddark">
-            {settings?.newsletterText || 'Entérate del menú del día, eventos y promociones especiales.'}
-          </p>
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/48 px-4 pb-4 backdrop-blur-sm sm:items-center sm:pb-0">
+      <div className="w-full max-w-2xl rounded-[24px] border border-linen bg-card p-5 shadow-cardHover dark:border-linendark dark:bg-carddark sm:p-6">
+        <div className="mb-4 flex items-start justify-between gap-4">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-forest dark:text-mint">
+              Comunidad
+            </p>
+            <h2 className="mt-2 font-playfair text-[28px] font-bold leading-tight text-ink dark:text-paper">
+              {settings?.newsletterTitle || 'Recibe nuestras novedades'}
+            </h2>
+            <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-muted dark:text-muteddark">
+              {settings?.newsletterText || 'Enterate del menu del dia, eventos y promociones especiales.'}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={closeModal}
+            aria-label="Cerrar newsletter"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink/8 text-xl font-bold text-ink/60 transition active:scale-95 dark:bg-paper/10 dark:text-paper/70"
+          >
+            ×
+          </button>
         </div>
 
         <form onSubmit={handleSubmit} className="grid gap-3">
@@ -74,7 +100,7 @@ export default function NewsletterSection({ settings, branchId, qrSourceId }) {
               required
               value={form.email}
               onChange={(e) => set('email', e.target.value)}
-              placeholder="Correo electrónico"
+              placeholder="Correo electronico"
               className="rounded-xl border border-linen bg-paper px-4 py-3 text-[14px] outline-none focus:border-forest focus:ring-2 focus:ring-mint dark:border-linendark dark:bg-paperdark"
             />
             <input
@@ -123,6 +149,6 @@ export default function NewsletterSection({ settings, branchId, qrSourceId }) {
           )}
         </form>
       </div>
-    </section>
+    </div>
   )
 }
