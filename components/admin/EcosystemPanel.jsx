@@ -66,10 +66,35 @@ export function HomePanel({ platform }) {
 }
 
 export function GrowthPanel({ recommendations = [] }) {
+  const extraRecommendations = [
+    {
+      id: 'demo-happy-hour',
+      title: 'Crear una campaña de baja demanda entre semana.',
+      body: 'Programa un happy hour corto para mover productos de alto margen entre lunes y miércoles, con QR exclusivo para medir respuesta.',
+      priority: 'media',
+      module: 'Promociones',
+    },
+    {
+      id: 'demo-brunch-combo',
+      title: 'Convertir el producto más visto en combo de brunch.',
+      body: 'Agrupa café, plato principal y pastelería con precio cerrado para aumentar ticket promedio sin complicar la operación.',
+      priority: 'alta',
+      module: 'Carta',
+    },
+    {
+      id: 'demo-table-qr',
+      title: 'Separar QR por mesa, vitrina y redes sociales.',
+      body: 'Así podrás comparar intención de consumo real, tráfico desde Instagram y comportamiento dentro del local.',
+      priority: 'media',
+      module: 'QR',
+    },
+  ]
+  const visibleRecommendations = [...recommendations, ...extraRecommendations]
+
   return (
     <SectionShell eyebrow="Crecimiento" title="Recomendaciones accionables">
       <MiniList
-        items={recommendations}
+        items={visibleRecommendations}
         render={(item) => (
           <>
             <div className="flex items-start justify-between gap-3">
@@ -229,41 +254,19 @@ export function HealthPanel({ platform, menu }) {
     { id: 'integrations', title: 'Integraciones', status: 'warning', detail: 'Credenciales externas pendientes' },
     { id: 'events', title: 'Último evento recibido', status: platform?.analytics?.summary?.uniqueSessions ? 'ok' : 'warning', detail: `${platform?.analytics?.summary?.uniqueSessions || 0} sesiones` },
   ]
-  const roles = [
-    { id: 'superadmin', title: 'Superadmin', detail: 'Gestiona clientes, planes, integraciones y salud global de la plataforma.' },
-    { id: 'owner', title: 'Propietario', detail: 'Control total del negocio: carta, sucursales, QR, métricas, clientes y equipo.' },
-    { id: 'admin', title: 'Administrador', detail: 'Opera carta, promociones, reservas, pedidos, QR y analítica por negocio o sucursal.' },
-    { id: 'editor', title: 'Empleado / editor', detail: 'Actualiza productos, disponibilidad, banners y tareas operativas del día a día.' },
-  ]
   return (
-    <div className="grid gap-4">
-      <SectionShell eyebrow="Salud digital" title="Semáforo operativo">
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {checks.map((check) => (
-            <div key={check.id} className="rounded-[16px] border border-linen bg-paper p-4">
-              <div className="flex items-start justify-between gap-3">
-                <p className="font-black text-ink">{check.title}</p>
-                <StatusPill status={check.status} />
-              </div>
-              <p className="mt-2 text-[12.5px] text-muted">{check.detail}</p>
+    <SectionShell eyebrow="Salud digital" title="Semáforo operativo">
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        {checks.map((check) => (
+          <div key={check.id} className="rounded-[16px] border border-linen bg-paper p-4">
+            <div className="flex items-start justify-between gap-3">
+              <p className="font-black text-ink">{check.title}</p>
+              <StatusPill status={check.status} />
             </div>
-          ))}
-        </div>
-      </SectionShell>
-
-      <SectionShell eyebrow="Roles demo" title="Modelo de permisos preparado">
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {roles.map((role) => (
-            <div key={role.id} className="rounded-[16px] border border-linen bg-paper p-4">
-              <p className="font-black text-ink">{role.title}</p>
-              <p className="mt-2 text-[12.5px] leading-relaxed text-muted">{role.detail}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 rounded-[14px] bg-mintsoft px-4 py-3 text-[12.5px] font-bold leading-relaxed text-ink/72">
-          En esta demo todos los accesos autorizados entran al mismo panel. El RBAC granular queda modelado para la etapa con usuarios reales y base de datos.
-        </p>
-      </SectionShell>
-    </div>
+            <p className="mt-2 text-[12.5px] text-muted">{check.detail}</p>
+          </div>
+        ))}
+      </div>
+    </SectionShell>
   )
 }

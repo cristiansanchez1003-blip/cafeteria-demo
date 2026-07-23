@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useAdmin } from '@/hooks/useAdmin'
 import { usePlatform } from '@/hooks/usePlatform'
@@ -22,19 +22,27 @@ import {
   OperationsPanel,
 } from '@/components/admin/EcosystemPanel'
 
+const ROLE_OPTIONS = [
+  { id: 'owner', label: 'Propietario', help: 'Vista completa del negocio' },
+  { id: 'admin', label: 'Administrador', help: 'Operación y crecimiento' },
+  { id: 'editor', label: 'Empleado', help: 'Gestión diaria del local' },
+]
+
+const ROLE_LABELS = ROLE_OPTIONS.reduce((acc, role) => ({ ...acc, [role.id]: role.label }), {})
+
 const TABS = [
-  { id: 'inicio', label: 'Inicio' },
-  { id: 'productos', label: 'Carta' },
-  { id: 'promos', label: 'Promos' },
-  { id: 'operaciones', label: 'Operaciones' },
-  { id: 'clientes', label: 'Clientes' },
-  { id: 'sucursales', label: 'Sucursales' },
-  { id: 'metricas', label: 'Analítica' },
-  { id: 'crecimiento', label: 'Crecimiento' },
-  { id: 'integraciones', label: 'Integraciones' },
-  { id: 'salud', label: 'Salud' },
-  { id: 'ajustes', label: 'Ajustes' },
-  { id: 'qr', label: 'QR' },
+  { id: 'inicio', label: 'Inicio', description: 'Resumen general', roles: ['owner', 'admin', 'editor'] },
+  { id: 'productos', label: 'Carta', description: 'Productos y disponibilidad', roles: ['owner', 'admin', 'editor'] },
+  { id: 'promos', label: 'Promos', description: 'Banners y campañas', roles: ['owner', 'admin', 'editor'] },
+  { id: 'operaciones', label: 'Operaciones', description: 'Pedidos, avisos y turnos', roles: ['owner', 'admin', 'editor'] },
+  { id: 'clientes', label: 'Clientes', description: 'Reservas y contactos', roles: ['owner', 'admin', 'editor'] },
+  { id: 'sucursales', label: 'Sucursales', description: 'Locales y horarios', roles: ['owner', 'admin'] },
+  { id: 'metricas', label: 'Analítica', description: 'QR, horarios y dispositivos', roles: ['owner', 'admin', 'editor'] },
+  { id: 'crecimiento', label: 'Crecimiento', description: 'Acciones recomendadas', roles: ['owner', 'admin'] },
+  { id: 'integraciones', label: 'Integraciones', description: 'Conexiones externas', roles: ['owner'] },
+  { id: 'salud', label: 'Salud', description: 'Estado técnico y datos', roles: ['owner', 'admin'] },
+  { id: 'ajustes', label: 'Ajustes', description: 'Marca y categorías', roles: ['owner'] },
+  { id: 'qr', label: 'QR', description: 'Fuentes de escaneo', roles: ['owner', 'admin', 'editor'] },
 ]
 
 export default function DashboardPage() {
@@ -59,13 +67,26 @@ export default function DashboardPage() {
   } = useAdmin()
 
   const [tab, setTab] = useState('inicio')
+  const [role, setRole] = useState('owner')
   const [search, setSearch] = useState('')
   const [filterCat, setFilterCat] = useState('all')
   const [branchFilter, setBranchFilter] = useState('all')
   const [daysFilter, setDaysFilter] = useState(7)
   const [editing, setEditing] = useState(null)
   const [toast, setToast] = useState(null)
+  const navRef = useRef(null)
   const { platform, loading: platformLoading } = usePlatform({ branchId: branchFilter, days: daysFilter })
+
+  const visibleTabs = useMemo(
+    () => TABS.filter((item) => item.roles.includes(role)),
+    [role]
+  )
+
+  useEffect(() => {
+    if (!visibleTabs.some((item) => item.id === tab)) {
+      setTab('inicio')
+    }
+  }, [tab, visibleTabs])
 
   const categories = useMemo(
     () => [...(menu?.categories || [])].sort((a, b) => (a.sort || 0) - (b.sort || 0)),
@@ -123,6 +144,13 @@ export default function DashboardPage() {
     }
   }
 
+  function scrollNav(direction) {
+    navRef.current?.scrollBy({
+      left: direction * Math.min(520, navRef.current.clientWidth * 0.8),
+      behavior: 'smooth',
+    })
+  }
+
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-paper">
@@ -144,7 +172,14 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-paper pb-24">
-      <AdminHeader dirty={dirty} saving={saving} onSave={handleSave} />
+      <AdminHeader
+        dirty={dirty}
+        saving={saving}
+        onSave={handleSave}
+        role={role}
+        roleOptions={ROLE_OPTIONS}
+        onRoleChange={setRole}
+      />
 
       <main className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
         <section className="rounded-[22px] bg-ink p-5 text-white shadow-cardHover sm:p-6">
@@ -173,22 +208,60 @@ export default function DashboardPage() {
           </div>
         </section>
 
-        <div className="mt-4 grid gap-3 lg:grid-cols-[1fr_auto]">
-          <div className="no-scrollbar flex gap-2 overflow-x-auto rounded-[18px] border border-linen bg-card p-2 shadow-card">
-            {TABS.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setTab(t.id)}
-                className={`shrink-0 rounded-full px-4 py-2.5 text-[13px] font-black transition active:scale-95 ${
-                  tab === t.id
-                    ? 'bg-ink text-mint shadow-nav'
-                    : 'text-ink/58 hover:bg-ink/5 hover:text-ink'
-                }`}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
+        <div className="mt-4 grid gap-3 xl:grid-cols-[1fr_auto]">
+          <section className="rounded-[20px] border border-linen bg-card p-3 shadow-card">
+            <div className="mb-3 flex items-center justify-between gap-3 px-1">
+              <div>
+                <p className="text-[11px] font-black uppercase tracking-[0.18em] text-forest">
+                  Navegación del panel
+                </p>
+                <p className="mt-1 text-[13px] font-bold text-muted">
+                  Vista actual: {ROLE_LABELS[role]} · {visibleTabs.length} módulos disponibles
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => scrollNav(-1)}
+                  aria-label="Ver módulos anteriores"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-linen bg-paper text-xl font-black text-ink shadow-card transition hover:bg-mintsoft active:scale-95"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollNav(1)}
+                  aria-label="Ver más módulos"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-linen bg-paper text-xl font-black text-ink shadow-card transition hover:bg-mintsoft active:scale-95"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+            <div
+              ref={navRef}
+              className="no-scrollbar flex snap-x gap-2 overflow-x-auto overscroll-x-contain scroll-smooth pb-1"
+            >
+              {visibleTabs.map((t) => (
+                <button
+                  key={t.id}
+                  onClick={() => setTab(t.id)}
+                  className={`min-h-[74px] w-[210px] shrink-0 snap-start rounded-[16px] border px-4 py-3 text-left transition active:scale-[0.98] ${
+                    tab === t.id
+                      ? 'border-ink bg-ink text-white shadow-nav'
+                      : 'border-linen bg-paper text-ink hover:border-forest hover:bg-mintsoft'
+                  }`}
+                >
+                  <span className={`block text-[16px] font-black leading-tight ${tab === t.id ? 'text-mint' : 'text-ink'}`}>
+                    {t.label}
+                  </span>
+                  <span className={`mt-1 block text-[12.5px] font-bold leading-snug ${tab === t.id ? 'text-white/68' : 'text-muted'}`}>
+                    {t.description}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </section>
 
           <div className="grid grid-cols-2 gap-2">
             <select value={branchFilter} onChange={(e) => setBranchFilter(e.target.value)} className={inputCls}>
