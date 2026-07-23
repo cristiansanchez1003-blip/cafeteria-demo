@@ -171,7 +171,7 @@ export default function DashboardPage() {
     'w-full rounded-xl border border-linen bg-card px-4 py-2.5 text-[14.5px] text-ink shadow-card outline-none transition focus:border-forest focus:ring-2 focus:ring-mint'
 
   return (
-    <div className="min-h-screen bg-paper pb-24">
+    <div className="min-h-screen overflow-x-hidden bg-paper pb-24">
       <AdminHeader
         dirty={dirty}
         saving={saving}
@@ -208,18 +208,18 @@ export default function DashboardPage() {
           </div>
         </section>
 
-        <div className="mt-4 grid gap-3 xl:grid-cols-[1fr_auto]">
-          <section className="rounded-[20px] border border-linen bg-card p-3 shadow-card">
-            <div className="mb-3 flex items-center justify-between gap-3 px-1">
-              <div>
+        <div className="mt-4 grid min-w-0 gap-3 xl:grid-cols-[minmax(0,1fr)_minmax(280px,360px)]">
+          <section className="min-w-0 overflow-hidden rounded-[20px] border border-linen bg-card p-3 shadow-card">
+            <div className="mb-3 flex min-w-0 items-center justify-between gap-3 px-1">
+              <div className="min-w-0">
                 <p className="text-[11px] font-black uppercase tracking-[0.18em] text-forest">
                   Navegación del panel
                 </p>
-                <p className="mt-1 text-[13px] font-bold text-muted">
+                <p className="mt-1 truncate text-[13px] font-bold text-muted">
                   Vista actual: {ROLE_LABELS[role]} · {visibleTabs.length} módulos disponibles
                 </p>
               </div>
-              <div className="flex gap-2">
+              <div className="flex shrink-0 gap-2">
                 <button
                   type="button"
                   onClick={() => scrollNav(-1)}
@@ -240,22 +240,22 @@ export default function DashboardPage() {
             </div>
             <div
               ref={navRef}
-              className="no-scrollbar flex snap-x gap-2 overflow-x-auto overscroll-x-contain scroll-smooth pb-1"
+              className="no-scrollbar flex max-w-full snap-x gap-2 overflow-x-auto overscroll-x-contain scroll-smooth pb-1"
             >
               {visibleTabs.map((t) => (
                 <button
                   key={t.id}
                   onClick={() => setTab(t.id)}
-                  className={`min-h-[74px] w-[210px] shrink-0 snap-start rounded-[16px] border px-4 py-3 text-left transition active:scale-[0.98] ${
+                  className={`min-h-[68px] w-[168px] shrink-0 snap-start rounded-[14px] border px-3 py-2.5 text-left transition active:scale-[0.98] sm:w-[190px] ${
                     tab === t.id
                       ? 'border-ink bg-ink text-white shadow-nav'
                       : 'border-linen bg-paper text-ink hover:border-forest hover:bg-mintsoft'
                   }`}
                 >
-                  <span className={`block text-[16px] font-black leading-tight ${tab === t.id ? 'text-mint' : 'text-ink'}`}>
+                  <span className={`block truncate text-[15px] font-black leading-tight sm:text-[16px] ${tab === t.id ? 'text-mint' : 'text-ink'}`}>
                     {t.label}
                   </span>
-                  <span className={`mt-1 block text-[12.5px] font-bold leading-snug ${tab === t.id ? 'text-white/68' : 'text-muted'}`}>
+                  <span className={`mt-1 line-clamp-2 block text-[12px] font-bold leading-snug sm:text-[12.5px] ${tab === t.id ? 'text-white/68' : 'text-muted'}`}>
                     {t.description}
                   </span>
                 </button>
@@ -263,7 +263,7 @@ export default function DashboardPage() {
             </div>
           </section>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid min-w-0 grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-1">
             <select value={branchFilter} onChange={(e) => setBranchFilter(e.target.value)} className={inputCls}>
               <option value="all">Todas las sucursales</option>
               {(platform?.branches || []).map((branch) => (
