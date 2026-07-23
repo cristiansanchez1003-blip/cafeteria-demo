@@ -14,13 +14,13 @@ export default function AdminHeader({ dirty, saving, onSave }) {
   return (
     <header className="sticky top-0 z-40 border-b border-linen bg-paper/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:px-6">
-        <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-linen bg-white shadow-card">
+        <span className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-[16px] border border-linen bg-white shadow-card">
           <Image
-            src="/images/branding/logo/alma-cafe-logo.png"
+            src="/images/branding/logo/alma-cafe-logo-light.webp"
             alt="Alma Café logo"
             fill
-            sizes="44px"
-            className="object-contain p-1.5"
+            sizes="48px"
+            className="object-cover"
           />
         </span>
         <div>

@@ -229,19 +229,41 @@ export function HealthPanel({ platform, menu }) {
     { id: 'integrations', title: 'Integraciones', status: 'warning', detail: 'Credenciales externas pendientes' },
     { id: 'events', title: 'Último evento recibido', status: platform?.analytics?.summary?.uniqueSessions ? 'ok' : 'warning', detail: `${platform?.analytics?.summary?.uniqueSessions || 0} sesiones` },
   ]
+  const roles = [
+    { id: 'superadmin', title: 'Superadmin', detail: 'Gestiona clientes, planes, integraciones y salud global de la plataforma.' },
+    { id: 'owner', title: 'Propietario', detail: 'Control total del negocio: carta, sucursales, QR, métricas, clientes y equipo.' },
+    { id: 'admin', title: 'Administrador', detail: 'Opera carta, promociones, reservas, pedidos, QR y analítica por negocio o sucursal.' },
+    { id: 'editor', title: 'Empleado / editor', detail: 'Actualiza productos, disponibilidad, banners y tareas operativas del día a día.' },
+  ]
   return (
-    <SectionShell eyebrow="Salud digital" title="Semáforo operativo">
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-        {checks.map((check) => (
-          <div key={check.id} className="rounded-[16px] border border-linen bg-paper p-4">
-            <div className="flex items-start justify-between gap-3">
-              <p className="font-black text-ink">{check.title}</p>
-              <StatusPill status={check.status} />
+    <div className="grid gap-4">
+      <SectionShell eyebrow="Salud digital" title="Semáforo operativo">
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {checks.map((check) => (
+            <div key={check.id} className="rounded-[16px] border border-linen bg-paper p-4">
+              <div className="flex items-start justify-between gap-3">
+                <p className="font-black text-ink">{check.title}</p>
+                <StatusPill status={check.status} />
+              </div>
+              <p className="mt-2 text-[12.5px] text-muted">{check.detail}</p>
             </div>
-            <p className="mt-2 text-[12.5px] text-muted">{check.detail}</p>
-          </div>
-        ))}
-      </div>
-    </SectionShell>
+          ))}
+        </div>
+      </SectionShell>
+
+      <SectionShell eyebrow="Roles demo" title="Modelo de permisos preparado">
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {roles.map((role) => (
+            <div key={role.id} className="rounded-[16px] border border-linen bg-paper p-4">
+              <p className="font-black text-ink">{role.title}</p>
+              <p className="mt-2 text-[12.5px] leading-relaxed text-muted">{role.detail}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 rounded-[14px] bg-mintsoft px-4 py-3 text-[12.5px] font-bold leading-relaxed text-ink/72">
+          En esta demo todos los accesos autorizados entran al mismo panel. El RBAC granular queda modelado para la etapa con usuarios reales y base de datos.
+        </p>
+      </SectionShell>
+    </div>
   )
 }

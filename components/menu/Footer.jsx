@@ -41,7 +41,7 @@ function ContactLink({ href, label, sub, type, branch, qrSourceId, sessionId, ch
 }
 
 export default function Footer({ settings, branch, qrSourceId, sessionId }) {
-  const { lang, t } = useApp()
+  const { lang, t, theme } = useApp()
   if (!settings) return null
 
   const hours = localizedField(settings, 'hours', lang)
@@ -51,19 +51,22 @@ export default function Footer({ settings, branch, qrSourceId, sessionId }) {
   const brandName = settings.name || 'Alma Café'
   const poweredBy = settings.poweredByName || 'Espíritu Digital'
   const poweredByUrl = settings.poweredByUrl || ''
+  const logoLightUrl = settings.logoLightUrl || settings.theme?.logoLightUrl || settings.logoUrl || settings.theme?.logoUrl
+  const logoDarkUrl = settings.logoDarkUrl || settings.theme?.logoDarkUrl || logoLightUrl
+  const logoUrl = theme === 'dark' ? logoDarkUrl : logoLightUrl
 
   return (
     <footer className="safe-bottom mt-8 bg-ink px-5 pb-10 pt-10 dark:bg-carddark">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          {settings.logoUrl && (
-            <div className="relative mb-5 h-16 w-36 overflow-hidden rounded-[14px] bg-white p-2 shadow-card">
+          {logoUrl && (
+            <div className="relative mb-5 h-20 w-40 overflow-hidden rounded-[16px] border border-white/10 bg-white shadow-card dark:bg-ink">
               <Image
-                src={settings.logoUrl}
+                src={logoUrl}
                 alt={`${brandName} logo`}
                 fill
                 sizes="144px"
-                className="object-contain p-2"
+                className="object-cover"
               />
             </div>
           )}

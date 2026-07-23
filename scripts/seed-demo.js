@@ -116,6 +116,9 @@ function seedMenu() {
     address: branches[0].address,
     city: 'Santiago',
     whatsapp: branches[0].whatsapp,
+    logoUrl: '/images/branding/logo/alma-cafe-logo-light.webp',
+    logoLightUrl: '/images/branding/logo/alma-cafe-logo-light.webp',
+    logoDarkUrl: '/images/branding/logo/alma-cafe-logo-dark.webp',
     heroImage: '/images/branding/hero/alma-cafe-hero-main.webp',
     heroImageAlt: 'Interior de Alma Café con clientes disfrutando café de especialidad y brunch.',
     interiorImage: '/images/branding/interior/alma-cafe-interior-premium.webp',
@@ -128,7 +131,9 @@ function seedMenu() {
     newsletterTitle: 'Recibe nuestras novedades',
     newsletterText: 'Entérate del menú del día, eventos y promociones especiales.',
     theme: {
-      logoUrl: '/images/branding/logo/alma-cafe-logo.png',
+      logoUrl: '/images/branding/logo/alma-cafe-logo-light.webp',
+      logoLightUrl: '/images/branding/logo/alma-cafe-logo-light.webp',
+      logoDarkUrl: '/images/branding/logo/alma-cafe-logo-dark.webp',
       colors: {
         paper: '#F7F4EE',
         ink: '#24282A',

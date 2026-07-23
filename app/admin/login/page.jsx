@@ -52,11 +52,11 @@ export default function LoginPage() {
         <div className="image-glass-panel mb-6 rounded-[24px] p-5 text-center text-white">
           <span className="relative mx-auto flex h-20 w-20 items-center justify-center overflow-hidden rounded-[22px] border border-white/16 bg-white shadow-cardHover">
             <Image
-              src="/images/branding/logo/alma-cafe-logo.png"
+              src="/images/branding/logo/alma-cafe-logo-dark.webp"
               alt="Alma Café logo"
               fill
               sizes="80px"
-              className="object-contain p-2.5"
+              className="object-cover"
             />
           </span>
           <h1 className="mt-4 font-playfair text-3xl font-bold">Alma Café</h1>
@@ -112,9 +112,17 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <p className="image-glass-chip mx-auto mt-6 max-w-xs rounded-full px-4 py-2 text-center text-[12px] text-white/82">
-          Ecosistema SaaS para cafeterías, restaurantes y bares
-        </p>
+        <div className="image-glass-panel mx-auto mt-6 max-w-sm rounded-[18px] px-5 py-3 text-center text-white">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-mint">
+            Ecosistema SaaS gastronómico
+          </p>
+          <p className="mt-1 text-[13px] font-bold text-white/90">
+            Para cafeterías, restaurantes y bares
+          </p>
+          <p className="mt-2 text-[11.5px] font-semibold text-white/68">
+            By Espíritu Digital
+          </p>
+        </div>
       </motion.div>
     </main>
   )

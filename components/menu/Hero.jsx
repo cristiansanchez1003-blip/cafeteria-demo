@@ -7,7 +7,7 @@ import { useApp } from '@/contexts/AppContext'
 
 export default function Hero({ settings, productCount = 0, promotionCount = 0 }) {
   const { scrollY } = useScroll()
-  const { lang } = useApp()
+  const { lang, theme } = useApp()
   const y = useTransform(scrollY, [0, 260], [0, 22])
   const opacity = useTransform(scrollY, [0, 260], [1, 0.5])
 
@@ -16,7 +16,9 @@ export default function Hero({ settings, productCount = 0, promotionCount = 0 })
   const brandName = settings?.name || 'Alma Café'
   const heroImage = settings?.heroImage || '/images/branding/hero/alma-cafe-hero-main.webp'
   const heroAlt = settings?.heroImageAlt || 'Interior de Alma Café con café de especialidad y brunch.'
-  const logoUrl = settings?.logoUrl || settings?.theme?.logoUrl || '/images/branding/logo/alma-cafe-logo.png'
+  const logoLightUrl = settings?.logoLightUrl || settings?.theme?.logoLightUrl || settings?.logoUrl || settings?.theme?.logoUrl || '/images/branding/logo/alma-cafe-logo-light.webp'
+  const logoDarkUrl = settings?.logoDarkUrl || settings?.theme?.logoDarkUrl || '/images/branding/logo/alma-cafe-logo-dark.webp'
+  const logoUrl = theme === 'dark' ? logoDarkUrl : logoLightUrl
 
   return (
     <header className="relative h-[52svh] min-h-[350px] max-h-[500px] overflow-hidden bg-ink text-white sm:h-[50vh] sm:min-h-[380px] lg:max-h-[540px]">
@@ -37,13 +39,13 @@ export default function Hero({ settings, productCount = 0, promotionCount = 0 })
       >
         <div className="mb-auto flex items-center justify-between gap-4">
           <div className="image-glass-chip flex items-center gap-3 rounded-2xl px-3 py-2">
-            <span className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-white/25 bg-white shadow-sm">
+            <span className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-[18px] border border-white/25 bg-white shadow-sm dark:bg-ink">
               <Image
                 src={logoUrl}
                 alt={`${brandName} logo`}
                 fill
                 sizes="56px"
-                className="object-contain p-1.5"
+                className="object-cover"
               />
             </span>
             <div>

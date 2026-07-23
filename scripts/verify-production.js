@@ -87,7 +87,7 @@ check('Marca demo', () => {
   assert(staleReferences.length === 0, `quedan referencias antiguas en ${staleReferences.map((file) => path.relative(root, file)).join(', ')}`)
 })
 
-warn('Configura GITHUB_TOKEN y GITHUB_REPO en Vercel para persistir metricas y cambios del admin.', !process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO)
+warn('Configura GITHUB_TOKEN, GITHUB_REPO y GITHUB_BRANCH=main en Vercel para persistir metricas y cambios del admin.', !process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO || !process.env.GITHUB_BRANCH)
 warn('Configura NEXT_PUBLIC_SITE_URL con la URL final de Vercel antes de generar QR para clientes.', !process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL.includes('localhost'))
 warn('Cloudinary es opcional, pero sin sus credenciales el admin solo podra pegar URLs de imagenes.', !process.env.CLOUDINARY_CLOUD_NAME || !process.env.CLOUDINARY_API_KEY || !process.env.CLOUDINARY_API_SECRET)
 

@@ -23,14 +23,16 @@ Stack: **Next.js 14**, **Tailwind CSS**, **Framer Motion**, **qrcode.react** y p
 
 ## Usuarios demo y roles
 
-La autenticacion actual usa `ADMIN_USER` y `ADMIN_PASSWORD`. El seed crea usuarios/roles dentro de `data/platform.json` para modelar multi-tenant:
+La autenticacion actual usa una credencial demo unica (`ADMIN_USER` y `ADMIN_PASSWORD`). El seed tambien crea usuarios/roles dentro de `data/platform.json` para mostrar el modelo multi-tenant:
 
-- `superadmin@cafedigital.cl`: superadmin.
-- `duena@almacafe.cl`: propietario.
-- `admin@almacafe.cl`: administrador.
-- `encargada@almacafe.cl`: editor.
+| Usuario demo | Rol | Capacidades pensadas para el producto |
+| --- | --- | --- |
+| `superadmin@cafedigital.cl` | `superadmin` | Gestionar todos los clientes, planes, salud global, integraciones y soporte de plataforma. |
+| `duena@almacafe.cl` | `owner` | Administrar el negocio completo: carta, precios, sucursales, QR, metricas, reservas, pedidos, clientes, promociones y usuarios. |
+| `admin@almacafe.cl` | `admin` | Operar una marca o sucursal: editar carta, promos, horarios, QR, reservas, pedidos, clientes y analitica operativa. |
+| `encargada@almacafe.cl` | `editor` | Mantener contenido del dia a dia: productos, disponibilidad, banners, pedidos/reservas y datos visibles del menu. |
 
-La UI ya representa esos roles en datos, pero el control granular por rol sigue pendiente de migrar a una base real con sesiones multiusuario.
+Estado actual: esos roles estan modelados para la demo y para explicar el roadmap, pero la sesion del panel todavia no aplica RBAC granular. Cualquier login demo autorizado entra al mismo dashboard. La siguiente etapa natural es convertir `ADMIN_USER`/`ADMIN_PASSWORD` en usuarios reales con permisos por rol.
 
 ## Variables de entorno
 
@@ -43,7 +45,7 @@ AUTH_SECRET=genera-un-secreto-largo-aleatorio
 NEXT_PUBLIC_SITE_URL=https://tu-demo.vercel.app
 
 GITHUB_TOKEN=
-GITHUB_REPO=usuario/repositorio
+GITHUB_REPO=cristiansanchez1003-blip/cafeteria-demo
 GITHUB_BRANCH=main
 
 CLOUDINARY_CLOUD_NAME=
@@ -52,7 +54,7 @@ CLOUDINARY_API_SECRET=
 CLOUDINARY_FOLDER=el-cafe-digital
 ```
 
-Para Vercel, `GITHUB_TOKEN` y `GITHUB_REPO` son recomendados porque el filesystem serverless no conserva escrituras. Usa un token fine-grained de GitHub con permiso **Contents: Read and write** solo sobre este repositorio. Con eso se guardan cambios del admin, metricas QR, newsletter, reservas y pedidos en `data/menu.json` y `data/platform.json`.
+Para Vercel, `GITHUB_TOKEN`, `GITHUB_REPO` y `GITHUB_BRANCH` son obligatorios si quieres que el panel guarde cambios. El filesystem serverless no conserva escrituras. Usa un token fine-grained de GitHub con permiso **Contents: Read and write** solo sobre este repositorio, define `GITHUB_REPO=cristiansanchez1003-blip/cafeteria-demo` y `GITHUB_BRANCH=main`. Con eso se guardan cambios del admin, metricas QR, newsletter, reservas y pedidos en `data/menu.json` y `data/platform.json`.
 
 Cloudinary es opcional. Sin esas variables el administrador puede pegar URLs de imagenes manualmente, pero no subir archivos desde el panel.
 
@@ -90,7 +92,7 @@ npm run build
 3. Configura las variables de entorno de `.env.local.example`.
 4. Asegura que `NEXT_PUBLIC_SITE_URL` tenga la URL final de Vercel o tu dominio.
 5. Crea un `GITHUB_TOKEN` fine-grained con acceso solo a este repo y permiso `Contents: Read and write`.
-6. Define `GITHUB_REPO` como `usuario/repositorio` y `GITHUB_BRANCH` como la rama de deploy.
+6. Define `GITHUB_REPO=cristiansanchez1003-blip/cafeteria-demo` y `GITHUB_BRANCH=main`.
 7. Despliega.
 
 Despues del deploy, prueba:

@@ -19,7 +19,7 @@
     "newsletterTitle": "Recibe nuestras novedades",
     "newsletterText": "Entérate del menú del día, eventos y promociones especiales.",
     "theme": {
-      "logoUrl": "/images/branding/logo/alma-cafe-logo.png",
+      "logoUrl": "/images/branding/logo/alma-cafe-logo-light.webp",
       "colors": {
         "paper": "#F5EFE6",
         "ink": "#26211D",
@@ -30,12 +30,14 @@
       "radius": "18px",
       "buttonStyle": "pill",
       "cardStyle": "soft-shadow",
-      "tone": "premium, cálido y contemporáneo"
+      "tone": "premium, cálido y contemporáneo",
+      "logoLightUrl": "/images/branding/logo/alma-cafe-logo-light.webp",
+      "logoDarkUrl": "/images/branding/logo/alma-cafe-logo-dark.webp"
     },
     "description": "Alma Café es un espacio contemporáneo de café de especialidad, brunch y pastelería artesanal, creado para disfrutar cada momento con calma.",
     "seoTitle": "Alma Café | Café de especialidad, brunch y pastelería",
     "seoDescription": "Descubre Alma Café: café de especialidad, brunch, pastelería artesanal y una experiencia cálida y contemporánea.",
-    "logoUrl": "/images/branding/logo/alma-cafe-logo.png",
+    "logoUrl": "/images/branding/logo/alma-cafe-logo-light.webp",
     "heroImage": "/images/branding/hero/alma-cafe-hero-main.webp",
     "heroImageAlt": "Interior de Alma Café con clientes disfrutando café de especialidad y brunch.",
     "interiorImage": "/images/branding/interior/alma-cafe-interior-premium.webp",
@@ -45,7 +47,9 @@
     "storyTitle": "Un café contemporáneo con pausa propia",
     "storyText": "Alma Café combina café de especialidad, brunch y pastelería artesanal en un espacio cálido, minimalista y pensado para disfrutar con calma.",
     "poweredByName": "Espíritu Digital",
-    "poweredByUrl": ""
+    "poweredByUrl": "",
+    "logoLightUrl": "/images/branding/logo/alma-cafe-logo-light.webp",
+    "logoDarkUrl": "/images/branding/logo/alma-cafe-logo-dark.webp"
   },
   "promotions": [
     {
